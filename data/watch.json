@@ -294,7 +294,8 @@
     "note": "2nd time",
     "poster": "https://image.tmdb.org/t/p/w500/7kwcLFNt887saoQAL7EY0XnW7VI.jpg",
     "category": "films",
-    "listOrder": 32
+    "listOrder": 32,
+    "favorite": true
   },
   {
     "title": "Before We Go",
@@ -537,7 +538,8 @@
     "note": "probably 3rd time",
     "poster": "https://image.tmdb.org/t/p/w500/a07wLy4ONfpsjnBqMwhlWTJTcm.jpg",
     "category": "films",
-    "listOrder": 59
+    "listOrder": 59,
+    "favorite": true
   },
   {
     "title": "Forces of Nature",
@@ -681,7 +683,8 @@
     "note": "Exceptional movie",
     "poster": "https://image.tmdb.org/t/p/w500/gjk8YdXpItoC1in53FCrZMFIuBx.jpg",
     "category": "films",
-    "listOrder": 75
+    "listOrder": 75,
+    "favorite": true
   },
   {
     "title": "F1",
@@ -834,7 +837,8 @@
     "note": "2nd time",
     "poster": "https://image.tmdb.org/t/p/w500/mOyZ0UAWaOJartFq2G3Cv0soFtQ.jpg",
     "category": "films",
-    "listOrder": 92
+    "listOrder": 92,
+    "favorite": true
   },
   {
     "title": "Medieval",
@@ -861,7 +865,8 @@
     "note": "2nd time",
     "poster": "https://image.tmdb.org/t/p/w500/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
     "category": "films",
-    "listOrder": 95
+    "listOrder": 95,
+    "favorite": true
   },
   {
     "title": "Any Given Sunday",
@@ -924,7 +929,8 @@
     "note": "like the 4th time",
     "poster": "https://image.tmdb.org/t/p/w500/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
     "category": "films",
-    "listOrder": 102
+    "listOrder": 102,
+    "favorite": true
   },
   {
     "title": "Irrational Man",
@@ -1086,7 +1092,8 @@
     "note": "2nd watch again",
     "poster": "https://image.tmdb.org/t/p/w500/2rq96Ihbqb1eU3TEBVtgFlqbeX7.jpg",
     "category": "films",
-    "listOrder": 120
+    "listOrder": 120,
+    "favorite": true
   },
   {
     "title": "Materialists",
@@ -1158,7 +1165,8 @@
     "note": "already watched years ago, again",
     "poster": "https://image.tmdb.org/t/p/w500/or1gBugydmjToAEq7OZY0owwFk.jpg",
     "category": "films",
-    "listOrder": 128
+    "listOrder": 128,
+    "favorite": true
   },
   {
     "title": "Joker: Folie À Deux",
@@ -1275,7 +1283,8 @@
     "note": null,
     "poster": "https://image.tmdb.org/t/p/w500/qtO57obCJuUBS0en3HLgFgZ19Xk.jpg",
     "category": "films",
-    "listOrder": 141
+    "listOrder": 141,
+    "favorite": true
   },
   {
     "title": "Parasite",
@@ -1608,7 +1617,8 @@
     "note": "watched for the second time",
     "poster": "https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
     "category": "films",
-    "listOrder": 178
+    "listOrder": 178,
+    "favorite": true
   },
   {
     "title": "It Ends with Us",
@@ -2031,7 +2041,8 @@
     "note": null,
     "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
     "category": "films",
-    "listOrder": 225
+    "listOrder": 225,
+    "favorite": true
   },
   {
     "title": "The Godfather Part II",
@@ -2643,7 +2654,8 @@
     "note": "this was a very very good film!!",
     "poster": "https://image.tmdb.org/t/p/w500/btExhxzdUZoQagLaYyXgT4KgT2e.jpg",
     "category": "films",
-    "listOrder": 293
+    "listOrder": 293,
+    "favorite": true
   },
   {
     "title": "Reptile",
@@ -2832,7 +2844,8 @@
     "note": null,
     "poster": "https://image.tmdb.org/t/p/w500/aSgl2DxPG3DuQXoaHr500KeULmT.jpg",
     "category": "films",
-    "listOrder": 314
+    "listOrder": 314,
+    "favorite": true
   },
   {
     "title": "Redeeming Love",
@@ -3706,5 +3719,95 @@
     "poster": "https://image.tmdb.org/t/p/w500/s2uNbATWA2qZTVgsrJeqWmQPb4V.jpg",
     "category": "documentary-series",
     "listOrder": 7
+  },
+  {
+    "title": "300",
+    "year": 2007,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/h7Lcio0c9ohxPhSZg42eTlKIVVY.jpg",
+    "category": "films",
+    "listOrder": 367,
+    "favorite": true
+  },
+  {
+    "title": "The Patriot",
+    "year": 2000,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/fWZd815QxUCUcrWQZwUkAp9ljG.jpg",
+    "category": "films",
+    "listOrder": 368,
+    "favorite": true
+  },
+  {
+    "title": "Rocky",
+    "year": 1976,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/xSI0dbKLDETwhiVUy6hGE8KXUln.jpg",
+    "category": "films",
+    "listOrder": 369,
+    "favorite": true
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    "category": "films",
+    "listOrder": 370,
+    "favorite": true
+  },
+  {
+    "title": "Jason Bourne",
+    "year": 2016,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/xA7N41glw17MBQtcWSm2eBlBRuG.jpg",
+    "category": "films",
+    "listOrder": 371,
+    "favorite": true
+  },
+  {
+    "title": "The Social Network",
+    "year": 2010,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+    "category": "films",
+    "listOrder": 372,
+    "favorite": true
+  },
+  {
+    "title": "How to Lose a Guy in 10 Days",
+    "year": 2003,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/2dlftyPz7mTYbrsPvTogyFmYd7d.jpg",
+    "category": "films",
+    "listOrder": 373,
+    "favorite": true
+  },
+  {
+    "title": "Scent of a Woman",
+    "year": 1992,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/4adI7IaveWb7EidYXfLb3MK3CgO.jpg",
+    "category": "films",
+    "listOrder": 374,
+    "favorite": true
+  },
+  {
+    "title": "The Big Short",
+    "year": 2015,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/scVEaJEwP8zUix8vgmMoJJ9Nq0w.jpg",
+    "category": "films",
+    "listOrder": 375,
+    "favorite": true
   }
 ]
