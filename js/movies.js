@@ -1,6 +1,16 @@
 (() => {
   const GRID_ID = "poster-grid";
-  const DATA_URL = "/data/movies.json";
+  const DATA_URL = "/data/watch.json";
+
+  const CATEGORY_LABELS = {
+    films: "Films",
+    documentaries: "Documentaries",
+    standup: "Stand Up",
+    series: "Series",
+    "documentary-series": "Documentary series",
+  };
+
+  const VALID_FILTERS = new Set(["all", ...Object.keys(CATEGORY_LABELS)]);
 
   const grid = document.getElementById(GRID_ID);
   if (!grid) return;
@@ -11,8 +21,10 @@
   const modalNote = document.getElementById("modal-note");
   const modalClose = document.getElementById("modal-close");
   const modalBackdrop = document.getElementById("modal-backdrop");
+  const filterNav = document.querySelector(".watch-filter");
 
   let movies = [];
+  let activeFilter = "all";
 
   /** Newest watched at top; oldest at bottom; undated keep listOrder after dated. */
   function sortMovies(list) {
@@ -42,10 +54,53 @@
     return movies.find((m) => slugify(m.title, m.year) === slug);
   }
 
+  function filteredList() {
+    if (activeFilter === "all") return movies;
+    return movies.filter((m) => m.category === activeFilter);
+  }
+
+  function readFilterFromUrl() {
+    const params = new URLSearchParams(location.search);
+    const fromQuery = params.get("c");
+    if (fromQuery && VALID_FILTERS.has(fromQuery)) return fromQuery;
+    const hash = location.hash.replace(/^#/, "");
+    const hashMatch = hash.match(/^filter=(.+)$/);
+    if (hashMatch && VALID_FILTERS.has(hashMatch[1])) return hashMatch[1];
+    return "all";
+  }
+
+  function writeFilterToUrl(filter) {
+    const params = new URLSearchParams(location.search);
+    if (filter === "all") params.delete("c");
+    else params.set("c", filter);
+    const qs = params.toString();
+    const hash = location.hash || "";
+    // Keep detail slug hashes; strip filter= hashes
+    const keepHash = hash.startsWith("#filter=") ? "" : hash;
+    const next = location.pathname + (qs ? `?${qs}` : "") + keepHash;
+    history.replaceState(null, "", next);
+  }
+
+  function setFilter(filter, { updateUrl = true } = {}) {
+    if (!VALID_FILTERS.has(filter)) filter = "all";
+    activeFilter = filter;
+    if (filterNav) {
+      filterNav.querySelectorAll("[data-filter]").forEach((btn) => {
+        const on = btn.getAttribute("data-filter") === filter;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+    if (updateUrl) writeFilterToUrl(filter);
+    render(filteredList());
+  }
+
   function openDetail(movie) {
     if (!modal || !movie) return;
     modalTitle.textContent = movie.title;
     const bits = [];
+    const catLabel = movie.category && CATEGORY_LABELS[movie.category];
+    if (catLabel) bits.push(catLabel);
     if (movie.year) bits.push(String(movie.year));
     if (movie.watched) bits.push(`watched ${movie.watched}`);
     modalYear.textContent = bits.join(" · ");
@@ -62,7 +117,7 @@
     document.body.classList.add("modal-open");
     const slug = slugify(movie.title, movie.year);
     if (location.hash !== `#${slug}`) {
-      history.replaceState(null, "", `#${slug}`);
+      history.replaceState(null, "", location.pathname + location.search + `#${slug}`);
     }
     modalClose?.focus();
   }
@@ -124,13 +179,19 @@
 
   function syncFromHash() {
     const slug = location.hash.replace(/^#/, "");
-    if (!slug) {
+    if (!slug || slug.startsWith("filter=")) {
       closeDetail();
       return;
     }
     const movie = findBySlug(slug);
     if (movie) openDetail(movie);
   }
+
+  filterNav?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-filter]");
+    if (!btn || !filterNav.contains(btn)) return;
+    setFilter(btn.getAttribute("data-filter"));
+  });
 
   modalClose?.addEventListener("click", closeDetail);
   modalBackdrop?.addEventListener("click", closeDetail);
@@ -143,19 +204,20 @@
 
   fetch(DATA_URL)
     .then((r) => {
-      if (!r.ok) throw new Error(`Failed to load movies (${r.status})`);
+      if (!r.ok) throw new Error(`Failed to load watch list (${r.status})`);
       return r.json();
     })
     .then((data) => {
-      const raw = Array.isArray(data) ? data : data.movies || [];
+      const raw = Array.isArray(data) ? data : data.movies || data.watch || [];
       movies = sortMovies(raw);
-      render(movies);
+      const initial = readFilterFromUrl();
+      setFilter(initial, { updateUrl: initial !== "all" });
       syncFromHash();
     })
     .catch((err) => {
       const status = document.createElement("p");
       status.className = "movies-status";
-      status.textContent = "Could not load the film list.";
+      status.textContent = "Could not load the watch list.";
       grid.replaceWith(status);
       console.error(err);
     });

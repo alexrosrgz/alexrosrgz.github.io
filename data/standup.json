@@ -1,16 +1,58 @@
 [
   {
-    "title": "Trevor Noah",
+    "title": "Trevor Noah: I Wish You Would",
     "year": null,
     "watched": null,
-    "note": "four specials",
-    "poster": null
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/r2eTjNgAf5VAzd5GMVEExr7F6Lw.jpg"
   },
   {
-    "title": "Taylor Tomlinson",
+    "title": "Trevor Noah: Where Was I",
     "year": null,
     "watched": null,
-    "note": "four specials with dates",
-    "poster": null
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/nt2uIRpYZ68g0J7dCSnJZqA5unS.jpg"
+  },
+  {
+    "title": "Trevor Noah: Afraid of the Dark",
+    "year": null,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/hXbNEZWoK9SeTPwZCXqx9fYrYDF.jpg"
+  },
+  {
+    "title": "Trevor Noah: Son of Patricia",
+    "year": null,
+    "watched": null,
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/dQefCK4Y94gngyAaemJkoKakcEm.jpg"
+  },
+  {
+    "title": "Taylor Tomlinson: Quarter-Life Crisis",
+    "year": null,
+    "watched": "2026-01-21",
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/k3dWZYGa0Tq1mdOUrUXTF7i2n3z.jpg"
+  },
+  {
+    "title": "Taylor Tomlinson: Look at You",
+    "year": null,
+    "watched": "2026-02-11",
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/de8ZRKr0TEFTuvdvlolIt6bLJUk.jpg"
+  },
+  {
+    "title": "Taylor Tomlinson: Have It All",
+    "year": null,
+    "watched": "2026-02-21",
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/nHsbWXfhVk53azsXICJGzn2imMg.jpg"
+  },
+  {
+    "title": "Taylor Tomlinson: Prodigal Daughter",
+    "year": null,
+    "watched": "2026-02-25",
+    "note": null,
+    "poster": "https://image.tmdb.org/t/p/w500/5n85A8bspgGBhIZ2HnNfbbr6GRe.jpg"
   }
 ]
