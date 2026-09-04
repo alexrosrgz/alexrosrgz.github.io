@@ -1,7 +1,7 @@
 [
   {
     "title": "Troy",
-    "year": null,
+    "year": 2004,
     "watched": "2026-04-28",
     "note": "probably 3rd time",
     "poster": "https://image.tmdb.org/t/p/w500/a07wLy4ONfpsjnBqMwhlWTJTcm.jpg",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Gladiator",
-    "year": null,
+    "year": 2000,
     "watched": "2025-02-24",
     "note": "watched for the second time",
     "poster": "https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
@@ -25,7 +25,7 @@
   },
   {
     "title": "Braveheart",
-    "year": null,
+    "year": 1995,
     "watched": "2025-11-02",
     "note": "already watched years ago, again",
     "poster": "https://image.tmdb.org/t/p/w500/or1gBugydmjToAEq7OZY0owwFk.jpg",
@@ -41,7 +41,7 @@
   },
   {
     "title": "Lady Chatterley's Lover",
-    "year": null,
+    "year": 2022,
     "watched": null,
     "note": null,
     "poster": "https://image.tmdb.org/t/p/w500/aSgl2DxPG3DuQXoaHr500KeULmT.jpg",
@@ -49,7 +49,7 @@
   },
   {
     "title": "The Godfather",
-    "year": null,
+    "year": 1972,
     "watched": null,
     "note": null,
     "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
@@ -73,7 +73,7 @@
   },
   {
     "title": "Fly Me to the Moon",
-    "year": null,
+    "year": 2024,
     "watched": "2026-04-08",
     "note": "Exceptional movie",
     "poster": "https://image.tmdb.org/t/p/w500/gjk8YdXpItoC1in53FCrZMFIuBx.jpg",
@@ -81,7 +81,7 @@
   },
   {
     "title": "The Wolf of Wall Street",
-    "year": null,
+    "year": 2013,
     "watched": "2026-02-06",
     "note": "like the 4th time",
     "poster": "https://image.tmdb.org/t/p/w500/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
@@ -97,7 +97,7 @@
   },
   {
     "title": "Fair Play",
-    "year": null,
+    "year": 2023,
     "watched": null,
     "note": "this was a very very good film!!",
     "poster": "https://image.tmdb.org/t/p/w500/btExhxzdUZoQagLaYyXgT4KgT2e.jpg",
@@ -113,7 +113,7 @@
   },
   {
     "title": "Jobs",
-    "year": null,
+    "year": 2013,
     "watched": "2026-03-02",
     "note": "2nd time",
     "poster": "https://image.tmdb.org/t/p/w500/mOyZ0UAWaOJartFq2G3Cv0soFtQ.jpg",
@@ -121,7 +121,7 @@
   },
   {
     "title": "The Ugly Truth",
-    "year": null,
+    "year": 2009,
     "watched": "2025-12-03",
     "note": "2nd watch again",
     "poster": "https://image.tmdb.org/t/p/w500/2rq96Ihbqb1eU3TEBVtgFlqbeX7.jpg",
@@ -137,7 +137,7 @@
   },
   {
     "title": "Interstellar",
-    "year": null,
+    "year": 2014,
     "watched": "2026-02-20",
     "note": "2nd time",
     "poster": "https://image.tmdb.org/t/p/w500/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
@@ -145,7 +145,7 @@
   },
   {
     "title": "The Theory of Everything",
-    "year": null,
+    "year": 2014,
     "watched": "2026-07-18",
     "note": "2nd time",
     "poster": "https://image.tmdb.org/t/p/w500/7kwcLFNt887saoQAL7EY0XnW7VI.jpg",
@@ -169,7 +169,7 @@
   },
   {
     "title": "Margin Call",
-    "year": null,
+    "year": 2011,
     "watched": "2025-10-13",
     "note": null,
     "poster": "https://image.tmdb.org/t/p/w500/qtO57obCJuUBS0en3HLgFgZ19Xk.jpg",

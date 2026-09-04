@@ -150,11 +150,12 @@
 
   function openDetail(movie) {
     if (!modal || !movie) return;
-    modalTitle.textContent = movie.title;
+    modalTitle.textContent = movie.year
+      ? `${movie.title} (${movie.year})`
+      : movie.title;
     const bits = [];
     const catLabel = movie.category && CATEGORY_LABELS[movie.category];
     if (catLabel) bits.push(catLabel);
-    if (movie.year) bits.push(String(movie.year));
     if (movie.watched) bits.push(`watched ${movie.watched}`);
     modalYear.textContent = bits.join(" · ");
     modalYear.hidden = bits.length === 0;

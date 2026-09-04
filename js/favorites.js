@@ -27,16 +27,15 @@
 
   function openDetail(movie) {
     if (!modal || !movie) return;
-    modalTitle.textContent = movie.title;
-    const bits = [];
-    if (movie.year) bits.push(String(movie.year));
-    if (movie.watched) bits.push(`watched ${movie.watched}`);
-    modalYear.textContent = bits.join(" · ");
-    modalYear.hidden = bits.length === 0;
-    if (movie.note) {
-      modalNote.textContent = movie.note;
-      modalNote.hidden = false;
-    } else {
+    modalTitle.textContent = movie.year
+      ? `${movie.title} (${movie.year})`
+      : movie.title;
+    // Favorites: title + year only
+    if (modalYear) {
+      modalYear.textContent = "";
+      modalYear.hidden = true;
+    }
+    if (modalNote) {
       modalNote.textContent = "";
       modalNote.hidden = true;
     }
