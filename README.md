@@ -1,12 +1,12 @@
 # alexrosrgz.github.io
 
-Personal static site for **Alejandro Rosales Rodriguez**. Root-relative paths (`/css/…`, `/movies/…`) assume this repo is published as the user GitHub Pages site (`alexrosrgz.github.io`).
+Personal static site for **Alejandro Rosales Rodriguez**. Root-relative paths (`/css/…`, `/watchlist/…`) assume this repo is published as the user GitHub Pages site (`alexrosrgz.github.io`).
 
 ## GitHub Pages
 
 1. Push this repo to `alexrosrgz/alexrosrgz.github.io` (or enable Pages on the branch that holds these files).
 2. In **Settings → Pages**, set source to **Deploy from a branch**, branch `main` (or `master`), folder `/` (root).
-3. After deploy, the site is at `https://alexrosrgz.github.io/`. Movies live at `/movies/`.
+3. After deploy, the site is at `https://alexrosrgz.github.io/`. Watchlist lives at `/watchlist/`.
 
 No build step. Edit HTML/CSS/JSON and push.
 

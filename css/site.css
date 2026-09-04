@@ -146,7 +146,8 @@ img {
 }
 
 /* ——— Movies: no H1, headerless ——— */
-.page--movies {
+.page--movies,
+.page--watchlist {
   padding-top: 1.5rem;
 }
 
