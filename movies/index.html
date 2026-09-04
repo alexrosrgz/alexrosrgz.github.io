@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movies — Alejandro Rosales Rodriguez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-mark" href="/">AR</a>
+      <ul class="nav-links">
+        <li><a href="/story/">Story</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/movies/" class="is-active" aria-current="page">Movies</a></li>
+        <li><a href="/random/">Random</a></li>
+      </ul>
+    </nav>
+  <main class="page page--movies">
+    <ul class="poster-grid" id="poster-grid" aria-label="Films"></ul>
+  </main>
+
+  <div class="modal" id="movie-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button type="button" class="modal-backdrop" id="modal-backdrop" tabindex="-1" aria-label="Close"></button>
+    <div class="modal-panel">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-year" id="modal-year"></p>
+      <p class="modal-note" id="modal-note" hidden></p>
+    </div>
+  </div>
+
+  <script src="/js/movies.js" defer></script>
+
+</body>
+</html>
