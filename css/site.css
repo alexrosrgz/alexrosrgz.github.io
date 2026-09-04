@@ -546,3 +546,16 @@ body.modal-open {
 .search__clear:hover {
   color: var(--ink);
 }
+
+
+/* ——— Favorite Movies statement ——— */
+.page--favorites .favorites-statement {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 1.75rem;
+  max-width: 20ch;
+}
