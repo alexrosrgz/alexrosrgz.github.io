@@ -356,3 +356,44 @@ img {
 body.modal-open {
   overflow: hidden;
 }
+
+
+/* ——— Watch category filter (quiet text) ——— */
+.watch-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  padding: 0.75rem 0 1.25rem;
+}
+
+.watch-filter button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.watch-filter button:hover {
+  color: var(--ink);
+}
+
+.watch-filter button.is-active {
+  color: var(--ink);
+}
+
+.watch-filter button:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
