@@ -148,6 +148,53 @@
     refresh();
   }
 
+  function formatWatchedDate(raw) {
+    if (!raw) return null;
+    const s = String(raw).trim();
+    // ISO YYYY-MM-DD
+    let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+    if (m) {
+      const y = m[1];
+      const mo = m[2].padStart(2, "0");
+      const d = m[3].padStart(2, "0");
+      return `${mo}/${d}/${y}`;
+    }
+    // Hungarian YYYY.MM.DD
+    m = s.match(/^(\d{4})\.(\d{1,2})\.(\d{1,2})$/);
+    if (m) {
+      const y = m[1];
+      const mo = m[2].padStart(2, "0");
+      const d = m[3].padStart(2, "0");
+      return `${mo}/${d}/${y}`;
+    }
+    // German DD.MM.YYYY
+    m = s.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+    if (m) {
+      const a = parseInt(m[1], 10);
+      const b = parseInt(m[2], 10);
+      const y = m[3];
+      let day, month;
+      if (a > 12) {
+        day = a;
+        month = b;
+      } else if (b > 12) {
+        month = a;
+        day = b;
+      } else {
+        // Prefer DD.MM for dotted European
+        day = a;
+        month = b;
+      }
+      return `${String(month).padStart(2, "0")}/${String(day).padStart(2, "0")}/${y}`;
+    }
+    // US MM/DD/YYYY already
+    m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+    if (m) {
+      return `${m[1].padStart(2, "0")}/${m[2].padStart(2, "0")}/${m[3]}`;
+    }
+    return s;
+  }
+
   function openDetail(movie) {
     if (!modal || !movie) return;
     modalTitle.textContent = movie.year
@@ -156,16 +203,15 @@
     const bits = [];
     const catLabel = movie.category && CATEGORY_LABELS[movie.category];
     if (catLabel) bits.push(catLabel);
-    if (movie.watched) bits.push(`watched ${movie.watched}`);
+    const usDate = formatWatchedDate(movie.watched);
+    if (usDate) bits.push(`Watched ${usDate}`);
+    if (movie.platform) bits.push(movie.platform);
+    if (movie.note) bits.push(movie.note);
     modalYear.textContent = bits.join(" · ");
     modalYear.hidden = bits.length === 0;
-    if (movie.note) {
-      modalNote.textContent = movie.note;
-      modalNote.hidden = false;
-    } else {
-      modalNote.textContent = "";
-      modalNote.hidden = true;
-    }
+    // Note folded into meta line above
+    modalNote.textContent = "";
+    modalNote.hidden = true;
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.classList.add("modal-open");
