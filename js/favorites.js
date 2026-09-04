@@ -122,41 +122,6 @@
   window.addEventListener("hashchange", syncFromHash);
 
 
-  function fitStatement() {
-    const el = document.querySelector(".favorites-statement");
-    const wrap = document.querySelector(".favorites-statement-wrap");
-    if (!el || !wrap) return;
-
-    el.style.whiteSpace = "nowrap";
-    el.style.transform = "none";
-
-    const available = wrap.clientWidth;
-    if (available <= 0) return;
-
-    // Natural unscaled width of the single line
-    const natural = el.scrollWidth;
-    if (natural <= 0) return;
-
-    const scale = available / natural;
-    el.style.transform = "scale(" + scale + ")";
-    wrap.style.height = el.offsetHeight * scale + "px";
-  }
-
-  function scheduleFit() {
-    fitStatement();
-    requestAnimationFrame(fitStatement);
-  }
-
-  scheduleFit();
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(scheduleFit);
-  }
-  window.addEventListener("resize", scheduleFit);
-  if (typeof ResizeObserver !== "undefined") {
-    const wrap = document.querySelector(".favorites-statement-wrap");
-    if (wrap) new ResizeObserver(scheduleFit).observe(wrap);
-  }
-
   fetch(DATA_URL)
     .then((r) => {
       if (!r.ok) throw new Error(`Failed to load favorites (${r.status})`);
