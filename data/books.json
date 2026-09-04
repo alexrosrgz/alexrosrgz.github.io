@@ -1,0 +1,356 @@
+[
+  {
+    "title": "Hamlet",
+    "author": "William Shakespeare",
+    "finished": "2026-08-27",
+    "note": "read 91 pages on Aug/26-27, stayed the night in the library",
+    "platform": null,
+    "edition": "The Know-It-All version by Rachel DeTemple",
+    "cover": "https://covers.openlibrary.org/b/id/8281954-L.jpg",
+    "listOrder": 0
+  },
+  {
+    "title": "1929",
+    "author": "Andrew Ross Sorkin",
+    "finished": "2026-08-27",
+    "note": "audible.com",
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/15161980-L.jpg",
+    "listOrder": 5
+  },
+  {
+    "title": "Enlightenment Now",
+    "author": "Steven Pinker",
+    "finished": "2026-08-21",
+    "note": "audible.com",
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/8147013-L.jpg",
+    "listOrder": 19
+  },
+  {
+    "title": "Astrophysics for People in a Hurry",
+    "author": "Neil deGrasse Tyson",
+    "finished": "2026-07-16",
+    "note": "Ekstrom Library; started 06/03/2026",
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/7984709-L.jpg",
+    "listOrder": 13
+  },
+  {
+    "title": "The Big Picture",
+    "author": "Sean Carroll",
+    "finished": "2026-06-23",
+    "note": "audible.fr free trial",
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/7885928-L.jpg",
+    "listOrder": 1
+  },
+  {
+    "title": "Zero to One",
+    "author": "Peter Thiel",
+    "finished": "2026-06-15",
+    "note": "1st time Germany finished 12.06.2025; 2nd time US Jun 10–15 2026",
+    "platform": null,
+    "reads": [
+      {
+        "finished": "2025-06-12",
+        "note": "1st time, Germany"
+      },
+      {
+        "finished": "2026-06-15",
+        "note": "2nd time, US, started around Jun 10th 2026"
+      }
+    ],
+    "cover": "https://covers.openlibrary.org/b/id/9002334-L.jpg",
+    "listOrder": 12
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "finished": "2026-06-10",
+    "note": "audible.com",
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/12374726-L.jpg",
+    "listOrder": 18
+  },
+  {
+    "title": "21 Lessons for the 21st Century",
+    "author": "Yuval Noah Harari",
+    "finished": "2026-06-03",
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/10108277-L.jpg",
+    "listOrder": 20
+  },
+  {
+    "title": "The Deal",
+    "author": "Elle Kennedy",
+    "finished": "2026-05-30",
+    "note": "audible.fr free trial",
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/10201611-L.jpg",
+    "listOrder": 2
+  },
+  {
+    "title": "Suicidal Empathy",
+    "author": "Gad Saad",
+    "finished": "2026-05-25",
+    "note": "Amazon Music audiobook",
+    "platform": "Amazon Music",
+    "cover": null,
+    "listOrder": 3
+  },
+  {
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "finished": "2026-04-24",
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/211529-L.jpg",
+    "listOrder": 4
+  },
+  {
+    "title": "The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "finished": "2026-04-22",
+    "note": null,
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/36434-L.jpg",
+    "listOrder": 6
+  },
+  {
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "finished": "2026-04-15",
+    "note": "Ekstrom Library",
+    "platform": null,
+    "edition": "1998 Edition",
+    "cover": "https://covers.openlibrary.org/b/id/10432365-L.jpg",
+    "listOrder": 24
+  },
+  {
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "finished": "2026-03-14",
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8283901-L.jpg",
+    "listOrder": 14
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "finished": "2025-12-26",
+    "note": "Spotify audiobook",
+    "platform": "Spotify",
+    "cover": "https://covers.openlibrary.org/b/id/12539702-L.jpg",
+    "listOrder": 7
+  },
+  {
+    "title": "How Countries Go Broke: The Big Cycle",
+    "author": "Ray Dalio",
+    "finished": "2025-12-04",
+    "note": "Spotify audiobook",
+    "platform": "Spotify",
+    "cover": "https://covers.openlibrary.org/b/id/15093924-L.jpg",
+    "listOrder": 8
+  },
+  {
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "finished": "2025-11-05",
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/14542536-L.jpg",
+    "listOrder": 9
+  },
+  {
+    "title": "Space to Grow",
+    "author": "Matthew Weinzierl and Brendan Rosseau",
+    "finished": "2025-08-16",
+    "note": "audible.de",
+    "platform": "Audible",
+    "cover": null,
+    "listOrder": 10
+  },
+  {
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "finished": "2025-07-29",
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/7104760-L.jpg",
+    "listOrder": 11
+  },
+  {
+    "title": "Principles for Dealing with the Changing World Order",
+    "author": "Ray Dalio",
+    "finished": "2025-07-01",
+    "note": "audiobooks.com",
+    "platform": "audiobooks.com",
+    "cover": "https://covers.openlibrary.org/b/id/10452559-L.jpg",
+    "listOrder": 16
+  },
+  {
+    "title": "Elon Musk",
+    "author": "Walter Isaacson",
+    "finished": "2025-06-12",
+    "note": "Audible audiobook",
+    "platform": "Audible",
+    "cover": "https://covers.openlibrary.org/b/id/14420016-L.jpg",
+    "listOrder": 17
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "finished": "2025-01-04",
+    "note": "Spotify audiobook",
+    "platform": "Spotify",
+    "cover": "https://covers.openlibrary.org/b/id/11556106-L.jpg",
+    "listOrder": 15
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8634250-L.jpg",
+    "listOrder": 21
+  },
+  {
+    "title": "How to Avoid a Climate Disaster",
+    "author": "Bill Gates",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/10656063-L.jpg",
+    "listOrder": 22
+  },
+  {
+    "title": "Brief Answers to the Big Questions",
+    "author": "Stephen Hawking",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8815165-L.jpg",
+    "listOrder": 23
+  },
+  {
+    "title": "Homo Deus",
+    "author": "Yuval Noah Harari",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8846275-L.jpg",
+    "listOrder": 25
+  },
+  {
+    "title": "Elon Musk",
+    "author": "Ashlee Vance",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8463846-L.jpg",
+    "listOrder": 26
+  },
+  {
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/10746692-L.jpg",
+    "listOrder": 27
+  },
+  {
+    "title": "El Príncipe de la Niebla",
+    "author": "Carlos Ruiz Zafón",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/10926512-L.jpg",
+    "listOrder": 28
+  },
+  {
+    "title": "Robinson Crusoe",
+    "author": "Daniel Defoe",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/368541-L.jpg",
+    "listOrder": 29
+  },
+  {
+    "title": "Faust",
+    "author": "Johann Wolfgang von Goethe",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/6499459-L.jpg",
+    "listOrder": 30
+  },
+  {
+    "title": "Candide",
+    "author": "Voltaire",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/12736044-L.jpg",
+    "listOrder": 31
+  },
+  {
+    "title": "Tartuffe",
+    "author": "Molière",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8240407-L.jpg",
+    "listOrder": 32
+  },
+  {
+    "title": "Eugene Onegin",
+    "author": "Alexander Pushkin",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/11365660-L.jpg",
+    "listOrder": 33
+  },
+  {
+    "title": "The Tragedy of Man",
+    "author": "Imre Madách",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/9311167-L.jpg",
+    "listOrder": 34
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/14314858-L.jpg",
+    "listOrder": 35
+  },
+  {
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/8257991-L.jpg",
+    "listOrder": 36
+  },
+  {
+    "title": "A Doll's House",
+    "author": "Henrik Ibsen",
+    "finished": null,
+    "note": null,
+    "platform": null,
+    "cover": "https://covers.openlibrary.org/b/id/879914-L.jpg",
+    "listOrder": 37
+  }
+]
