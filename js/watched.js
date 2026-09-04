@@ -22,11 +22,16 @@
   const modalClose = document.getElementById("modal-close");
   const modalBackdrop = document.getElementById("modal-backdrop");
   const filterNav = document.querySelector(".watch-filter");
+  const searchRoot = document.querySelector(".search");
+  const searchToggle = document.querySelector(".search__toggle");
+  const searchInput = document.querySelector(".search__input");
+  const searchClear = document.querySelector(".search__clear");
 
   let movies = [];
   let activeFilter = "all";
+  let searchQuery = "";
+  let searchDebounce = null;
 
-  /** Newest watched at top; oldest at bottom; undated keep listOrder after dated. */
   function sortMovies(list) {
     const dated = [];
     const undated = [];
@@ -54,9 +59,24 @@
     return movies.find((m) => slugify(m.title, m.year) === slug);
   }
 
+  function matchesSearch(m, q) {
+    if (!q) return true;
+    const hay = `${m.title || ""} ${m.note || ""}`.toLowerCase();
+    return hay.includes(q);
+  }
+
   function filteredList() {
-    if (activeFilter === "all") return movies;
-    return movies.filter((m) => m.category === activeFilter);
+    let list = movies;
+    if (activeFilter !== "all") {
+      list = list.filter((m) => m.category === activeFilter);
+    }
+    const q = searchQuery.trim().toLowerCase();
+    if (q) list = list.filter((m) => matchesSearch(m, q));
+    return list;
+  }
+
+  function refresh() {
+    render(filteredList());
   }
 
   function readFilterFromUrl() {
@@ -75,7 +95,6 @@
     else params.set("c", filter);
     const qs = params.toString();
     const hash = location.hash || "";
-    // Keep detail slug hashes; strip filter= hashes
     const keepHash = hash.startsWith("#filter=") ? "" : hash;
     const next = location.pathname + (qs ? `?${qs}` : "") + keepHash;
     history.replaceState(null, "", next);
@@ -92,7 +111,41 @@
       });
     }
     if (updateUrl) writeFilterToUrl(filter);
-    render(filteredList());
+    refresh();
+  }
+
+  function syncClearButton() {
+    if (!searchClear) return;
+    const show = searchQuery.length > 0;
+    searchClear.hidden = !show;
+  }
+
+  function openSearch() {
+    if (!searchRoot) return;
+    searchRoot.setAttribute("data-open", "true");
+    searchToggle?.setAttribute("aria-expanded", "true");
+    requestAnimationFrame(() => searchInput?.focus());
+  }
+
+  function collapseSearch() {
+    if (!searchRoot) return;
+    searchRoot.setAttribute("data-open", "false");
+    searchToggle?.setAttribute("aria-expanded", "false");
+  }
+
+  function clearSearch({ collapse = false } = {}) {
+    searchQuery = "";
+    if (searchInput) searchInput.value = "";
+    syncClearButton();
+    refresh();
+    if (collapse) collapseSearch();
+    else searchInput?.focus();
+  }
+
+  function setSearchQuery(value) {
+    searchQuery = value;
+    syncClearButton();
+    refresh();
   }
 
   function openDetail(movie) {
@@ -193,11 +246,57 @@
     setFilter(btn.getAttribute("data-filter"));
   });
 
+  searchToggle?.addEventListener("click", () => {
+    const open = searchRoot?.getAttribute("data-open") === "true";
+    if (open) {
+      if (!searchQuery) collapseSearch();
+      else searchInput?.focus();
+    } else {
+      openSearch();
+    }
+  });
+
+  searchInput?.addEventListener("input", () => {
+    const value = searchInput.value;
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(() => setSearchQuery(value), 140);
+  });
+
+  searchClear?.addEventListener("click", () => clearSearch({ collapse: false }));
+
+  searchInput?.addEventListener("blur", () => {
+    // Defer so clear button click can fire first
+    setTimeout(() => {
+      if (document.activeElement === searchClear) return;
+      if (!searchQuery && searchRoot?.getAttribute("data-open") === "true") {
+        collapseSearch();
+      }
+    }, 120);
+  });
+
+  document.addEventListener("pointerdown", (e) => {
+    if (!searchRoot || searchRoot.getAttribute("data-open") !== "true") return;
+    if (searchRoot.contains(e.target)) return;
+    if (searchQuery) return; // stay open with query
+    collapseSearch();
+  });
+
   modalClose?.addEventListener("click", closeDetail);
   modalBackdrop?.addEventListener("click", closeDetail);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal?.classList.contains("is-open")) {
-      closeDetail();
+    if (e.key === "Escape") {
+      if (modal?.classList.contains("is-open")) {
+        closeDetail();
+        return;
+      }
+      if (searchRoot?.getAttribute("data-open") === "true") {
+        if (searchQuery) {
+          clearSearch({ collapse: false });
+        } else {
+          collapseSearch();
+          searchToggle?.focus();
+        }
+      }
     }
   });
   window.addEventListener("hashchange", syncFromHash);
