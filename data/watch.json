@@ -3676,7 +3676,7 @@
     "year": 2022,
     "watched": null,
     "note": null,
-    "poster": "/posters/our-universe.jpg",
+    "poster": "https://image.tmdb.org/t/p/w500/h2vjL6bUmoTu3vLVrkgoNjTgIhN.jpg",
     "category": "documentary-series",
     "listOrder": 4
   },
@@ -3685,7 +3685,7 @@
     "year": 2023,
     "watched": null,
     "note": null,
-    "poster": "/posters/unknown-cosmic-time-machine.jpg",
+    "poster": "https://image.tmdb.org/t/p/w500/1ZxroOwIaD6JGCYraNEJKddOUWp.jpg",
     "category": "documentary-series",
     "listOrder": 5
   },
