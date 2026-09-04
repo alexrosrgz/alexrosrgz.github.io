@@ -552,6 +552,7 @@ body.modal-open {
 .page--favorites .favorites-statement-wrap {
   width: 100%;
   margin: 0 0 2rem;
+  overflow: visible;
 }
 
 .page--favorites .favorites-statement-svg {
