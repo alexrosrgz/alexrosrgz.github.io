@@ -3,8 +3,7 @@
   const DATA_URL = "/data/watch.json";
 
   const CATEGORY_LABELS = {
-    films: "Films",
-    favorites: "Favorite Films",
+    films: "Movies",
     documentaries: "Documentaries",
     standup: "Stand Up",
     series: "Series",
@@ -68,9 +67,7 @@
 
   function filteredList() {
     let list = movies;
-    if (activeFilter === "favorites") {
-      list = list.filter((m) => m.favorite);
-    } else if (activeFilter !== "all") {
+    if (activeFilter !== "all") {
       list = list.filter((m) => m.category === activeFilter);
     }
     const q = searchQuery.trim().toLowerCase();
