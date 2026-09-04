@@ -124,24 +124,22 @@
 
   function fitStatement() {
     const el = document.querySelector(".favorites-statement");
-    if (!el) return;
-    const parent = el.parentElement;
-    if (!parent) return;
-    const available = parent.clientWidth;
+    const wrap = document.querySelector(".favorites-statement-wrap");
+    if (!el || !wrap) return;
+
+    el.style.whiteSpace = "nowrap";
+    el.style.transform = "none";
+
+    const available = wrap.clientWidth;
     if (available <= 0) return;
 
-    // Grow from a small size until the line fills the container width
-    let lo = 8;
-    let hi = Math.min(220, available);
-    el.style.fontSize = lo + "px";
-    // Binary search largest size that fits
-    for (let i = 0; i < 24; i++) {
-      const mid = (lo + hi) / 2;
-      el.style.fontSize = mid + "px";
-      if (el.scrollWidth <= available) lo = mid;
-      else hi = mid;
-    }
-    el.style.fontSize = lo + "px";
+    // Natural unscaled width of the single line
+    const natural = el.scrollWidth;
+    if (natural <= 0) return;
+
+    const scale = available / natural;
+    el.style.transform = "scale(" + scale + ")";
+    wrap.style.height = el.offsetHeight * scale + "px";
   }
 
   function scheduleFit() {
@@ -149,15 +147,14 @@
     requestAnimationFrame(fitStatement);
   }
 
+  scheduleFit();
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(scheduleFit);
-  } else {
-    scheduleFit();
   }
   window.addEventListener("resize", scheduleFit);
   if (typeof ResizeObserver !== "undefined") {
-    const main = document.querySelector(".page--favorites");
-    if (main) new ResizeObserver(scheduleFit).observe(main);
+    const wrap = document.querySelector(".favorites-statement-wrap");
+    if (wrap) new ResizeObserver(scheduleFit).observe(wrap);
   }
 
   fetch(DATA_URL)

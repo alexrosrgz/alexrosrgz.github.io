@@ -549,16 +549,25 @@ body.modal-open {
 
 
 /* ——— Favorite Movies statement ——— */
+.page--favorites .favorites-statement-wrap {
+  width: 100%;
+  margin: 0 0 2rem;
+  overflow: hidden;
+  line-height: 0; /* height set by JS after scale */
+}
+
 .page--favorites .favorites-statement {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
   font-family: var(--font-serif);
-  font-size: 3rem; /* JS fits to container width */
+  font-size: 64px; /* base; JS scales to fill wrap width */
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--ink);
-  margin: 0 0 2rem;
+  white-space: nowrap !important;
   max-width: none;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  transform-origin: left center;
+  will-change: transform;
 }
