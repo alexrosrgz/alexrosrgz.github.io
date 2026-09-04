@@ -195,6 +195,13 @@
     return s;
   }
 
+
+  function capitalizeNote(note) {
+    const s = String(note).trim();
+    if (!s) return s;
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
   function openDetail(movie) {
     if (!modal || !movie) return;
     modalTitle.textContent = movie.year
@@ -206,7 +213,7 @@
     const usDate = formatWatchedDate(movie.watched);
     if (usDate) bits.push(`Watched ${usDate}`);
     if (movie.platform) bits.push(movie.platform);
-    if (movie.note) bits.push(movie.note);
+    if (movie.note) bits.push(capitalizeNote(movie.note));
     modalYear.textContent = bits.join(" · ");
     modalYear.hidden = bits.length === 0;
     // Note folded into meta line above
