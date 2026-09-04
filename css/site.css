@@ -551,7 +551,7 @@ body.modal-open {
 /* ——— Favorite Movies statement ——— */
 .page--favorites .favorites-statement {
   font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 4.6vw, 3.5rem);
+  font-size: 3rem; /* JS fits to container width */
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -559,4 +559,6 @@ body.modal-open {
   margin: 0 0 2rem;
   max-width: none;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
