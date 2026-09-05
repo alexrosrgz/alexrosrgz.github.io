@@ -193,12 +193,16 @@ img {
   outline: none;
   box-shadow: none;
   background: color-mix(in srgb, var(--muted) 18%, var(--bg));
-  transition: transform 0.35s var(--ease);
+  transform: scale(1);
+  transition: transform 220ms var(--ease);
+  will-change: transform;
 }
 
-.poster-card:hover .poster-frame,
-.poster-card:focus-visible .poster-frame {
-  transform: scale(1.02);
+/* Hover lift — fine pointer only (no sticky touch hover) */
+@media (hover: hover) and (pointer: fine) {
+  .poster-card:hover .poster-frame {
+    transform: scale(1.02);
+  }
 }
 
 .poster-card:focus-visible {
@@ -206,8 +210,24 @@ img {
 }
 
 .poster-card:focus-visible .poster-frame {
+  transform: scale(1.02);
   outline: 2px solid var(--clay);
   outline-offset: 3px;
+}
+
+/* Press compress — snappy */
+.poster-card:active .poster-frame {
+  transform: scale(0.97);
+  transition-duration: 90ms;
+}
+
+/* Hold scale through modal open (no snap-back) */
+.poster-card.is-opening .poster-frame,
+.poster-card.is-opening:hover .poster-frame,
+.poster-card.is-opening:active .poster-frame,
+.poster-card.is-opening:focus-visible .poster-frame {
+  transform: scale(1.02);
+  transition-duration: 220ms;
 }
 
 .poster-frame img {
