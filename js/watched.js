@@ -275,23 +275,22 @@
 
     btn.appendChild(frame);
 
-    const setPressed = (on) => {
-      if (on) btn.classList.add("is-pressed");
-      else btn.classList.remove("is-pressed");
-    };
+
+    const setPressed = (on) => btn.classList.toggle("is-pressed", on);
     btn.addEventListener("pointerdown", (e) => {
       if (e.button != null && e.button !== 0) return;
       setPressed(true);
     });
-    btn.addEventListener("pointerup", () => setPressed(false));
-    btn.addEventListener("pointercancel", () => setPressed(false));
-    btn.addEventListener("pointerleave", () => setPressed(false));
+    const release = () => setPressed(false);
+    btn.addEventListener("pointerup", release);
+    btn.addEventListener("pointercancel", release);
+    btn.addEventListener("pointerleave", release);
     btn.addEventListener("click", () => {
-      // Keep compress visible through the click → modal handoff
       setPressed(true);
       openDetail(movie);
-      setTimeout(() => setPressed(false), 120);
+      requestAnimationFrame(() => setTimeout(release, 110));
     });
+
 
     li.appendChild(btn);
     return li;
