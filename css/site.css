@@ -623,21 +623,24 @@ body.modal-open {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 5 / 6;
-  object-fit: cover;
-  object-position: 70% 40%;
   border-radius: 10px;
 }
 
-.reading-hero__statement {
+.reading-hero__statement-wrap {
+  width: 100%;
   margin: 0;
-  max-width: 14ch;
-  font-family: "Source Serif 4", Georgia, serif;
-  font-weight: 600;
-  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #141413;
+  overflow: visible;
+}
+
+.reading-hero__statement-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.reading-hero__statement-svg text {
+  fill: var(--ink);
 }
 
 @media (max-width: 899px) {
@@ -646,14 +649,10 @@ body.modal-open {
     gap: 20px;
     padding: 28px 16px 36px;
   }
-
-  .reading-hero__statement {
-    max-width: 16ch;
-  }
 }
 
 .page--reading .reading-grid {
-  margin-top: 8px; /* hero already has bottom padding; keep light air before grid */
+  margin-top: 8px;
 }
 
 .reading-grid {
