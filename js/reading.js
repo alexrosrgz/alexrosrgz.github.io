@@ -1,12 +1,9 @@
 (() => {
-  const LEAD_ID = "reading-lead";
   const GRID_ID = "reading-grid";
   const DATA_URL = "/data/books.json";
-  const LEAD_COUNT = 6;
 
-  const leadEl = document.getElementById(LEAD_ID);
   const gridEl = document.getElementById(GRID_ID);
-  if (!leadEl || !gridEl) return;
+  if (!gridEl) return;
 
   function sortBooks(list) {
     const dated = [];
@@ -39,7 +36,7 @@
       const img = document.createElement("img");
       img.src = book.cover;
       img.alt = "";
-      img.loading = index < 6 ? "eager" : "lazy";
+      img.loading = index < 10 ? "eager" : "lazy";
       img.decoding = "async";
       img.addEventListener("error", () => {
         img.remove();
@@ -82,10 +79,10 @@
     return meta;
   }
 
-  function makeCard(book, index, sizeClass) {
+  function makeCard(book, index) {
     const a = document.createElement("a");
     a.href = "#";
-    a.className = "reading-card" + (sizeClass ? ` ${sizeClass}` : "");
+    a.className = "reading-card";
     a.setAttribute(
       "aria-label",
       book.author ? `${book.title} by ${book.author}` : book.title
@@ -96,30 +93,15 @@
     return a;
   }
 
-  function leadSizeClass(i) {
-    if (i === 0) return "reading-card--hero";
-    if (i === 1 || i === 2) return "reading-card--md";
-    return "";
-  }
-
   function render(list) {
-    leadEl.replaceChildren();
     gridEl.replaceChildren();
-
-    const lead = list.slice(0, LEAD_COUNT);
-    const rest = list.slice(LEAD_COUNT);
-
-    const leadFrag = document.createDocumentFragment();
-    lead.forEach((b, i) => leadFrag.appendChild(makeCard(b, i, leadSizeClass(i))));
-    leadEl.appendChild(leadFrag);
-
-    const restFrag = document.createDocumentFragment();
-    rest.forEach((b, i) => {
+    const frag = document.createDocumentFragment();
+    list.forEach((b, i) => {
       const li = document.createElement("li");
-      li.appendChild(makeCard(b, LEAD_COUNT + i, ""));
-      restFrag.appendChild(li);
+      li.appendChild(makeCard(b, i));
+      frag.appendChild(li);
     });
-    gridEl.appendChild(restFrag);
+    gridEl.appendChild(frag);
   }
 
   fetch(DATA_URL)
@@ -129,7 +111,6 @@
     })
     .then((data) => render(sortBooks(Array.isArray(data) ? data : [])))
     .catch(() => {
-      leadEl.innerHTML = "";
       gridEl.innerHTML = "";
     });
 })();
