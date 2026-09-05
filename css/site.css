@@ -221,14 +221,6 @@ img {
   transition-duration: 90ms;
 }
 
-/* Hold scale through modal open (no snap-back) */
-.poster-card.is-opening .poster-frame,
-.poster-card.is-opening:hover .poster-frame,
-.poster-card.is-opening:active .poster-frame,
-.poster-card.is-opening:focus-visible .poster-frame {
-  transform: scale(1.02);
-  transition-duration: 220ms;
-}
 
 .poster-frame img {
   width: 100%;

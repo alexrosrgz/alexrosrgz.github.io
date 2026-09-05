@@ -203,36 +203,9 @@
   }
 
 
-  let openingCard = null;
-  let openingTimer = null;
 
-  function clearOpeningCard() {
-    if (openingTimer) {
-      clearTimeout(openingTimer);
-      openingTimer = null;
-    }
-    if (openingCard) {
-      openingCard.classList.remove("is-opening");
-      openingCard = null;
-    }
-  }
-
-  function holdCardThroughOpen(card) {
-    clearOpeningCard();
-    if (!card) return;
-    openingCard = card;
-    openingCard.classList.add("is-opening");
-    // Hold until modal is mostly visible, then ease back under the dim
-    openingTimer = setTimeout(() => {
-      if (openingCard) openingCard.classList.remove("is-opening");
-      openingCard = null;
-      openingTimer = null;
-    }, 160);
-  }
-
-  function openDetail(movie, card) {
+  function openDetail(movie) {
     if (!modal || !movie) return;
-    holdCardThroughOpen(card);
     modalTitle.textContent = movie.year
       ? `${movie.title} (${movie.year})`
       : movie.title;
@@ -260,7 +233,6 @@
 
   function closeDetail() {
     if (!modal) return;
-    clearOpeningCard();
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("modal-open");
@@ -302,7 +274,7 @@
     }
 
     btn.appendChild(frame);
-    btn.addEventListener("click", () => openDetail(movie, btn));
+    btn.addEventListener("click", () => openDetail(movie));
     li.appendChild(btn);
     return li;
   }
