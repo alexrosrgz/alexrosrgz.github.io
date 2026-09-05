@@ -23,6 +23,7 @@ CSS source of truth: `css/site.css` `:root`.
 
 - **Nav mark**: full name `Alejandro Rosales Rodriguez` in Source Serif on every page.
 - **Tab title**: only `Alejandro Rosales Rodriguez` (no page-specific titles).
+- **Mobile nav**: wrap under `960px` (full name + links wrap; no horizontal scroll, no hamburger).
 - **Favorites statement**: continuous Source Serif SVG stretch (“I like watching movies…”).
 - **Reading statement**: same SVG treatment as Favorites; sized to column beside hero photo.
 - **Reading hero**: upright photo + statement; photo carries weight; no canvas-paint unless Alejandro asks.
