@@ -163,7 +163,7 @@
 
     const title = document.createElement("p");
     title.className = "reading-title";
-    title.textContent = displayTitle(book);
+    title.textContent = book.title || "";
     meta.appendChild(title);
 
     if (book.author) {
