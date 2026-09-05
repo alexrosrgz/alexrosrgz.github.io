@@ -628,7 +628,6 @@ body.modal-open {
 
 .page--favorites .favorites-statement-svg text {
   fill: var(--ink);
-  font-weight: 700;
 }
 
 /* ——— Reading ——— */
@@ -642,9 +641,9 @@ body.modal-open {
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 32px;
   align-items: stretch;
-  width: 100%;
-  margin: 0;
-  padding: 40px 0 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 28px 48px;
 }
 
 .reading-hero__statement {
@@ -678,7 +677,7 @@ body.modal-open {
   .reading-hero {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 28px 0 36px;
+    padding: 28px 16px 36px;
   }
 
   .reading-hero__statement {
@@ -692,9 +691,9 @@ body.modal-open {
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: 32px;
   align-items: stretch;
-  width: 100%;
-  margin: 0;
-  padding: 48px 0 56px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 28px 56px;
 }
 
 .reading-top3__covers {
@@ -743,7 +742,7 @@ body.modal-open {
   align-self: center;
   font-family: "Source Serif 4", Georgia, serif;
   font-weight: 700;
-  font-size: clamp(2.75rem, 5.5vw, 4rem);
+  font-size: clamp(2.75rem, 5.5vw, 4rem); /* ~64px max — subordinate to hero couplet */
   line-height: 1;
   letter-spacing: -0.02em;
   color: #141413;
@@ -769,7 +768,7 @@ body.modal-open {
   .reading-top3 {
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 36px 0 48px;
+    padding: 36px 16px 48px;
   }
 
   .reading-top3__statement {
@@ -786,8 +785,9 @@ body.modal-open {
 
 .reading-shelf-statement-wrap {
   width: 100%;
-  margin: 0 0 2rem;
-  padding: 8px 0 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 28px 40px;
   overflow: visible;
 }
 
@@ -800,9 +800,13 @@ body.modal-open {
 
 .reading-shelf-statement-svg text {
   fill: var(--ink);
-  font-weight: 700;
 }
 
+@media (max-width: 899px) {
+  .reading-shelf-statement-wrap {
+    padding: 4px 16px 32px;
+  }
+}
 
 .page--reading .reading-grid {
   margin-top: 0;
