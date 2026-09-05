@@ -2,9 +2,15 @@
   const GRID_ID = "reading-grid";
   const DATA_URL = "/data/books.json";
   const MIN_PRESS_MS = 80;
+  const TOP3_TITLES = [
+    "A Brief History of Time",
+    "Zero to One",
+    "Sapiens",
+  ];
 
   const gridEl = document.getElementById(GRID_ID);
-  if (!gridEl) return;
+  const top3El = document.getElementById("reading-top3");
+  if (!gridEl && !top3El) return;
 
   const modal = document.getElementById("book-modal");
   const modalTitle = document.getElementById("modal-title");
@@ -95,10 +101,15 @@
     return books.find((b) => slugify(b.title) === slug);
   }
 
+  function findByTitle(title) {
+    const want = String(title || "").toLowerCase();
+    return books.find((b) => String(b.title || "").toLowerCase() === want);
+  }
+
   function openDetail(book) {
     if (!modal || !book) return;
     document
-      .querySelectorAll(".reading-card.is-pressed")
+      .querySelectorAll(".reading-card.is-pressed, .reading-top3__card.is-pressed")
       .forEach((el) => el.classList.remove("is-pressed"));
     modalTitle.textContent = displayTitle(book);
     const meta = buildMetaLine(book);
@@ -175,18 +186,7 @@
     return meta;
   }
 
-  function makeCard(book, index) {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "reading-card";
-    const shown = displayTitle(book);
-    btn.setAttribute(
-      "aria-label",
-      book.author ? `${shown} by ${book.author}` : shown
-    );
-    btn.appendChild(coverFrame(book, index));
-    btn.appendChild(metaBlock(book));
-
+  function wirePress(btn, book) {
     let pressAt = 0;
     const setPressed = (on) => btn.classList.toggle("is-pressed", on);
     btn.addEventListener("pointerdown", (e) => {
@@ -210,19 +210,49 @@
         openDetail(book);
       }, wait);
     });
+  }
 
+  function makeCard(book, index, { coverOnly = false, className = "reading-card" } = {}) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = className;
+    const shown = displayTitle(book);
+    btn.setAttribute(
+      "aria-label",
+      book.author ? `${shown} by ${book.author}` : shown
+    );
+    btn.appendChild(coverFrame(book, index));
+    if (!coverOnly) btn.appendChild(metaBlock(book));
+    wirePress(btn, book);
     return btn;
   }
 
   function render(list) {
-    gridEl.replaceChildren();
-    const frag = document.createDocumentFragment();
-    list.forEach((b, i) => {
-      const li = document.createElement("li");
-      li.appendChild(makeCard(b, i));
-      frag.appendChild(li);
-    });
-    gridEl.appendChild(frag);
+    if (gridEl) {
+      gridEl.replaceChildren();
+      const frag = document.createDocumentFragment();
+      list.forEach((b, i) => {
+        const li = document.createElement("li");
+        li.appendChild(makeCard(b, i));
+        frag.appendChild(li);
+      });
+      gridEl.appendChild(frag);
+    }
+
+    if (top3El) {
+      top3El.replaceChildren();
+      const frag = document.createDocumentFragment();
+      TOP3_TITLES.forEach((title, i) => {
+        const book = findByTitle(title);
+        if (!book) return;
+        const li = document.createElement("li");
+        li.appendChild(
+          makeCard(book, i, { coverOnly: true, className: "reading-top3__card" })
+        );
+        frag.appendChild(li);
+      });
+      top3El.appendChild(frag);
+    }
   }
 
   function syncFromHash() {
@@ -253,6 +283,7 @@
       syncFromHash();
     })
     .catch(() => {
-      gridEl.innerHTML = "";
+      if (gridEl) gridEl.innerHTML = "";
+      if (top3El) top3El.innerHTML = "";
     });
 })();

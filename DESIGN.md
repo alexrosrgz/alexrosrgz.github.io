@@ -26,6 +26,7 @@ CSS source of truth: `css/site.css` `:root`.
 - **Mobile nav**: wrap under `960px` (full name + links wrap; no horizontal scroll, no hamburger).
 - **Favorites statement**: continuous Source Serif SVG stretch (“I like watching movies…”).
 - **Reading statement**: Source Serif couplet (plain CSS, max-width ~14ch) — Favorites weight/voice, **not** Favorites SVG `textLength` banner.
+- **Reading Top 3**: between hero and full grid; three covers left (Brief History of Time → Zero to One → Sapiens, cover-only) + `Top 3.` Source Serif right; same poster hover/press + book modal; mobile stacks type then covers.
 - **Reading hero**: statement left · smaller photo right (~40% width); upright photo; type block height ≈ photo on desktop; mobile stacks statement → photo → grid.
 - **Poster / cover grid**: no on-grid metadata chrome; details in modal.
 - **Poster hover** (fine pointer): `scale(1.015)` ~240ms ease-out — one cue only.

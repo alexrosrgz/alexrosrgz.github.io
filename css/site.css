@@ -261,7 +261,12 @@ body.modal-open .reading-card .reading-cover,
 body.modal-open .reading-card:hover .reading-cover,
 body.modal-open .reading-card:active .reading-cover,
 body.modal-open .reading-card.is-pressed .reading-cover,
-body.modal-open .reading-card:focus-visible .reading-cover {
+body.modal-open .reading-card:focus-visible .reading-cover,
+body.modal-open .reading-top3__card .reading-cover,
+body.modal-open .reading-top3__card:hover .reading-cover,
+body.modal-open .reading-top3__card:active .reading-cover,
+body.modal-open .reading-top3__card.is-pressed .reading-cover,
+body.modal-open .reading-top3__card:focus-visible .reading-cover {
   transform: scale(1);
   transition: none;
 }
@@ -681,8 +686,105 @@ body.modal-open {
   }
 }
 
+.reading-top3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 28px 56px;
+}
+
+.reading-top3__covers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.reading-top3__covers > li {
+  min-width: 0;
+}
+
+.reading-top3__card {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reading-top3__card:focus-visible {
+  outline: none;
+}
+
+.reading-top3__card:focus-visible .reading-cover {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+}
+
+.reading-top3__card .reading-cover {
+  border-radius: var(--radius-poster);
+}
+
+.reading-top3__statement {
+  margin: 0;
+  align-self: center;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #141413;
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .reading-top3__card:hover .reading-cover {
+    transform: scale(1.015);
+    transition-duration: 240ms;
+  }
+}
+
+.reading-top3__card.is-pressed .reading-cover,
+.reading-top3__card.is-pressed:hover .reading-cover,
+.reading-top3__card:active .reading-cover {
+  transform: scale(0.97);
+  transition-duration: 80ms;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@media (max-width: 899px) {
+  .reading-top3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 36px 16px 48px;
+  }
+
+  .reading-top3__statement {
+    order: -1;
+    align-self: start;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .reading-top3__covers {
+    gap: 11px;
+  }
+}
+
 .page--reading .reading-grid {
-  margin-top: 8px;
+  margin-top: 0;
+  padding-top: 8px;
 }
 
 .reading-grid {
