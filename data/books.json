@@ -7,7 +7,8 @@
     "platform": null,
     "edition": "The Know-It-All version by Rachel DeTemple",
     "cover": "/covers/books/hamlet-william-shakespeare.jpg",
-    "listOrder": 0
+    "listOrder": 0,
+    "year": 1603
   },
   {
     "title": "1929",
@@ -16,7 +17,8 @@
     "note": "audible.com",
     "platform": "Audible",
     "cover": "/covers/books/1929-andrew-ross-sorkin.jpg",
-    "listOrder": 5
+    "listOrder": 5,
+    "year": 2025
   },
   {
     "title": "Enlightenment Now",
@@ -25,7 +27,8 @@
     "note": "audible.com",
     "platform": "Audible",
     "cover": "/covers/books/enlightenment-now-steven-pinker.jpg",
-    "listOrder": 19
+    "listOrder": 19,
+    "year": 2018
   },
   {
     "title": "Astrophysics for People in a Hurry",
@@ -34,7 +37,8 @@
     "note": "Ekstrom Library; started 06/03/2026",
     "platform": null,
     "cover": "/covers/books/astrophysics-for-people-in-a-hurry-neil-degrasse-tyson.jpg",
-    "listOrder": 13
+    "listOrder": 13,
+    "year": 2017
   },
   {
     "title": "The Big Picture",
@@ -43,7 +47,8 @@
     "note": "audible.fr free trial",
     "platform": "Audible",
     "cover": "/covers/books/the-big-picture-sean-carroll.jpg",
-    "listOrder": 1
+    "listOrder": 1,
+    "year": 2016
   },
   {
     "title": "Zero to One",
@@ -62,7 +67,8 @@
       }
     ],
     "cover": "/covers/books/zero-to-one-peter-thiel.jpg",
-    "listOrder": 12
+    "listOrder": 12,
+    "year": 2014
   },
   {
     "title": "Steve Jobs",
@@ -71,7 +77,8 @@
     "note": "audible.com",
     "platform": "Audible",
     "cover": "/covers/books/steve-jobs-walter-isaacson.jpg",
-    "listOrder": 18
+    "listOrder": 18,
+    "year": 2011
   },
   {
     "title": "21 Lessons for the 21st Century",
@@ -80,7 +87,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/21-lessons-for-the-21st-century-yuval-noah-harari.jpg",
-    "listOrder": 20
+    "listOrder": 20,
+    "year": 2018
   },
   {
     "title": "The Deal",
@@ -89,7 +97,8 @@
     "note": "audible.fr free trial",
     "platform": "Audible",
     "cover": "/covers/books/the-deal-elle-kennedy.jpg",
-    "listOrder": 2
+    "listOrder": 2,
+    "year": 2015
   },
   {
     "title": "Suicidal Empathy",
@@ -99,7 +108,8 @@
     "platform": "Amazon Music",
     "cover": "/covers/books/suicidal-empathy-gad-saad.jpg",
     "listOrder": 3,
-    "edition": "Hardcover"
+    "edition": "Hardcover",
+    "year": 2026
   },
   {
     "title": "Meditations",
@@ -108,7 +118,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/meditations-marcus-aurelius.jpg",
-    "listOrder": 4
+    "listOrder": 4,
+    "year": null
   },
   {
     "title": "The Intelligent Investor",
@@ -118,7 +129,8 @@
     "platform": "Audible",
     "cover": "/covers/books/the-intelligent-investor-benjamin-graham.jpg",
     "listOrder": 6,
-    "edition": "75th Anniversary / Third Edition hardcover"
+    "edition": "75th Anniversary / Third Edition hardcover",
+    "year": 1949
   },
   {
     "title": "A Brief History of Time",
@@ -128,7 +140,8 @@
     "platform": null,
     "edition": "1998 Edition hardcover",
     "cover": "/covers/books/a-brief-history-of-time-stephen-hawking.jpg",
-    "listOrder": 24
+    "listOrder": 24,
+    "year": 1988
   },
   {
     "title": "Cosmos",
@@ -137,7 +150,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/cosmos-carl-sagan.jpg",
-    "listOrder": 14
+    "listOrder": 14,
+    "year": 1980
   },
   {
     "title": "Atomic Habits",
@@ -146,7 +160,8 @@
     "note": "Spotify audiobook",
     "platform": "Spotify",
     "cover": "/covers/books/atomic-habits-james-clear.jpg",
-    "listOrder": 7
+    "listOrder": 7,
+    "year": 2018
   },
   {
     "title": "How Countries Go Broke: The Big Cycle",
@@ -155,7 +170,8 @@
     "note": "Spotify audiobook",
     "platform": "Spotify",
     "cover": "/covers/books/how-countries-go-broke-the-big-cycle-ray-dalio.jpg",
-    "listOrder": 8
+    "listOrder": 8,
+    "year": 2025
   },
   {
     "title": "Think and Grow Rich",
@@ -164,7 +180,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/think-and-grow-rich-napoleon-hill.jpg",
-    "listOrder": 9
+    "listOrder": 9,
+    "year": 1937
   },
   {
     "title": "Space to Grow",
@@ -173,7 +190,8 @@
     "note": "audible.de",
     "platform": "Audible",
     "cover": "/covers/books/space-to-grow-matthew-weinzierl-and-brendan-rosseau.jpg",
-    "listOrder": 10
+    "listOrder": 10,
+    "year": 2025
   },
   {
     "title": "The Lean Startup",
@@ -182,7 +200,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/the-lean-startup-eric-ries.jpg",
-    "listOrder": 11
+    "listOrder": 11,
+    "year": 2011
   },
   {
     "title": "Principles for Dealing with the Changing World Order",
@@ -191,7 +210,8 @@
     "note": "audiobooks.com",
     "platform": "audiobooks.com",
     "cover": "/covers/books/principles-for-dealing-with-the-changing-world-order-ray-dalio.jpg",
-    "listOrder": 16
+    "listOrder": 16,
+    "year": 2021
   },
   {
     "title": "Elon Musk",
@@ -200,7 +220,8 @@
     "note": "Audible audiobook",
     "platform": "Audible",
     "cover": "/covers/books/elon-musk-walter-isaacson.jpg",
-    "listOrder": 17
+    "listOrder": 17,
+    "year": 2023
   },
   {
     "title": "The Alchemist",
@@ -210,7 +231,8 @@
     "platform": "Spotify",
     "cover": "/covers/books/the-alchemist-paulo-coelho.jpg",
     "listOrder": 15,
-    "edition": "25th Anniversary hardcover"
+    "edition": "25th Anniversary hardcover",
+    "year": 1988
   },
   {
     "title": "Sapiens",
@@ -219,7 +241,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/sapiens-yuval-noah-harari.jpg",
-    "listOrder": 21
+    "listOrder": 21,
+    "year": 2011
   },
   {
     "title": "How to Avoid a Climate Disaster",
@@ -228,7 +251,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/how-to-avoid-a-climate-disaster-bill-gates.jpg",
-    "listOrder": 22
+    "listOrder": 22,
+    "year": 2021
   },
   {
     "title": "Brief Answers to the Big Questions",
@@ -238,7 +262,8 @@
     "platform": null,
     "cover": "/covers/books/brief-answers-to-the-big-questions-stephen-hawking.jpg",
     "listOrder": 23,
-    "edition": "First edition hardcover"
+    "edition": "First edition hardcover",
+    "year": 2018
   },
   {
     "title": "Homo Deus",
@@ -247,7 +272,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/homo-deus-yuval-noah-harari.jpg",
-    "listOrder": 25
+    "listOrder": 25,
+    "year": 2015
   },
   {
     "title": "Elon Musk",
@@ -256,7 +282,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/elon-musk-ashlee-vance.jpg",
-    "listOrder": 26
+    "listOrder": 26,
+    "year": 2015
   },
   {
     "title": "The Little Prince",
@@ -265,7 +292,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/the-little-prince-antoine-de-saint-exup-ry.jpg",
-    "listOrder": 27
+    "listOrder": 27,
+    "year": 1943
   },
   {
     "title": "El Príncipe de la Niebla",
@@ -274,7 +302,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/el-pr-ncipe-de-la-niebla-carlos-ruiz-zaf-n.jpg",
-    "listOrder": 28
+    "listOrder": 28,
+    "year": 1993
   },
   {
     "title": "Robinson Crusoe",
@@ -283,7 +312,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/robinson-crusoe-daniel-defoe.jpg",
-    "listOrder": 29
+    "listOrder": 29,
+    "year": 1719
   },
   {
     "title": "Faust",
@@ -292,7 +322,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/faust-johann-wolfgang-von-goethe.jpg",
-    "listOrder": 30
+    "listOrder": 30,
+    "year": 1808
   },
   {
     "title": "Candide",
@@ -301,7 +332,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/candide-voltaire.jpg",
-    "listOrder": 31
+    "listOrder": 31,
+    "year": 1759
   },
   {
     "title": "Tartuffe",
@@ -310,7 +342,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/tartuffe-moli-re.jpg",
-    "listOrder": 32
+    "listOrder": 32,
+    "year": 1664
   },
   {
     "title": "Eugene Onegin",
@@ -319,7 +352,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/eugene-onegin-alexander-pushkin.jpg",
-    "listOrder": 33
+    "listOrder": 33,
+    "year": 1833
   },
   {
     "title": "The Tragedy of Man",
@@ -328,7 +362,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/the-tragedy-of-man-imre-mad-ch.jpg",
-    "listOrder": 34
+    "listOrder": 34,
+    "year": 1861
   },
   {
     "title": "The Picture of Dorian Gray",
@@ -337,7 +372,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/the-picture-of-dorian-gray-oscar-wilde.jpg",
-    "listOrder": 35
+    "listOrder": 35,
+    "year": 1890
   },
   {
     "title": "Romeo and Juliet",
@@ -346,7 +382,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/romeo-and-juliet-william-shakespeare.jpg",
-    "listOrder": 36
+    "listOrder": 36,
+    "year": 1597
   },
   {
     "title": "A Doll's House",
@@ -355,6 +392,7 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/a-doll-s-house-henrik-ibsen.jpg",
-    "listOrder": 37
+    "listOrder": 37,
+    "year": 1879
   }
 ]

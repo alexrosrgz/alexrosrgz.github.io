@@ -78,6 +78,12 @@
     return bits.join(" · ");
   }
 
+  function displayTitle(book) {
+    if (!book) return "";
+    const t = book.title || "";
+    return book.year ? `${t} (${book.year})` : t;
+  }
+
   function slugify(title) {
     return String(title || "")
       .toLowerCase()
@@ -94,7 +100,7 @@
     document
       .querySelectorAll(".reading-card.is-pressed")
       .forEach((el) => el.classList.remove("is-pressed"));
-    modalTitle.textContent = book.title || "";
+    modalTitle.textContent = displayTitle(book);
     const meta = buildMetaLine(book);
     if (modalMeta) {
       modalMeta.textContent = meta;
@@ -157,7 +163,7 @@
 
     const title = document.createElement("p");
     title.className = "reading-title";
-    title.textContent = book.title || "";
+    title.textContent = displayTitle(book);
     meta.appendChild(title);
 
     if (book.author) {
@@ -173,9 +179,10 @@
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "reading-card";
+    const shown = displayTitle(book);
     btn.setAttribute(
       "aria-label",
-      book.author ? `${book.title} by ${book.author}` : book.title
+      book.author ? `${shown} by ${book.author}` : shown
     );
     btn.appendChild(coverFrame(book, index));
     btn.appendChild(metaBlock(book));
