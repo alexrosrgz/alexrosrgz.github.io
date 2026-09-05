@@ -96,6 +96,7 @@
     btn.appendChild(frame);
 
 
+
     const setPressed = (on) => btn.classList.toggle("is-pressed", on);
     btn.addEventListener("pointerdown", (e) => {
       if (e.button != null && e.button !== 0) return;
@@ -106,10 +107,10 @@
     btn.addEventListener("pointercancel", release);
     btn.addEventListener("pointerleave", release);
     btn.addEventListener("click", () => {
-      setPressed(true);
+      release(); // modal starts — don't keep squash
       openDetail(movie);
-      requestAnimationFrame(() => setTimeout(release, 100));
     });
+
 
 
     li.appendChild(btn);

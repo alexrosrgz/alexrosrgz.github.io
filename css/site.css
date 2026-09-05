@@ -194,8 +194,15 @@ img {
   box-shadow: none;
   background: color-mix(in srgb, var(--muted) 18%, var(--bg));
   transform: scale(1);
-  /* Apple-ish: snappy in, slightly softer out */
-  transition: transform 100ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* Release / settle — Apple ease-out */
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .poster-card:hover .poster-frame {
+    transform: scale(1.02);
+    transition-duration: 220ms;
+  }
 }
 
 .poster-card:focus-visible {
@@ -203,12 +210,14 @@ img {
 }
 
 .poster-card:focus-visible .poster-frame {
+  transform: scale(1.02);
   outline: 2px solid var(--clay);
   outline-offset: 3px;
 }
 
-/* Quiet press only — no hover, no dim, no shadow */
+/* Press overrides hover — snappy in, no filter/shadow */
 .poster-card.is-pressed .poster-frame,
+.poster-card.is-pressed:hover .poster-frame,
 .poster-card:active .poster-frame {
   transform: scale(0.97);
   transition-duration: 80ms;
