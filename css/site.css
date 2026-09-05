@@ -215,10 +215,12 @@ img {
   outline-offset: 3px;
 }
 
-/* Press compress — snappy */
+/* Press compress — class held by JS so modal focus can't kill it */
+.poster-card.is-pressed .poster-frame,
+.poster-card.is-pressed:hover .poster-frame,
 .poster-card:active .poster-frame {
-  transform: scale(0.97);
-  transition-duration: 90ms;
+  transform: scale(0.96);
+  transition-duration: 80ms;
 }
 
 

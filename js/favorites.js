@@ -94,7 +94,25 @@
     }
 
     btn.appendChild(frame);
-    btn.addEventListener("click", () => openDetail(movie));
+
+    const setPressed = (on) => {
+      if (on) btn.classList.add("is-pressed");
+      else btn.classList.remove("is-pressed");
+    };
+    btn.addEventListener("pointerdown", (e) => {
+      if (e.button != null && e.button !== 0) return;
+      setPressed(true);
+    });
+    btn.addEventListener("pointerup", () => setPressed(false));
+    btn.addEventListener("pointercancel", () => setPressed(false));
+    btn.addEventListener("pointerleave", () => setPressed(false));
+    btn.addEventListener("click", () => {
+      // Keep compress visible through the click → modal handoff
+      setPressed(true);
+      openDetail(movie);
+      setTimeout(() => setPressed(false), 120);
+    });
+
     li.appendChild(btn);
     return li;
   }
