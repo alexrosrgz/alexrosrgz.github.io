@@ -606,9 +606,9 @@ body.modal-open {
 
 .reading-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 32px;
-  align-items: center;
+  align-items: stretch;
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 28px 48px;
@@ -627,7 +627,10 @@ body.modal-open {
 }
 
 .reading-hero__statement-wrap {
+  display: flex;
+  align-items: center;
   width: 100%;
+  min-height: 100%;
   margin: 0;
   overflow: visible;
 }
@@ -636,6 +639,7 @@ body.modal-open {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 100%;
   overflow: visible;
 }
 
@@ -646,8 +650,12 @@ body.modal-open {
 @media (max-width: 899px) {
   .reading-hero {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
     padding: 28px 16px 36px;
+  }
+
+  .reading-hero__statement-wrap {
+    min-height: 0;
   }
 }
 
