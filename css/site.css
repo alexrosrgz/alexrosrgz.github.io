@@ -200,8 +200,8 @@ img {
 
 @media (hover: hover) and (pointer: fine) {
   .poster-card:hover .poster-frame {
-    transform: scale(1.02);
-    transition-duration: 220ms;
+    transform: scale(1.015);
+    transition-duration: 240ms;
   }
 }
 
@@ -210,7 +210,7 @@ img {
 }
 
 .poster-card:focus-visible .poster-frame {
-  transform: scale(1.02);
+  transform: scale(1.015);
   outline: 2px solid var(--clay);
   outline-offset: 3px;
 }
