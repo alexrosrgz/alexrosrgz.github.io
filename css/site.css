@@ -75,6 +75,8 @@ img {
   letter-spacing: -0.02em;
   line-height: 1;
   color: var(--ink);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-links {
