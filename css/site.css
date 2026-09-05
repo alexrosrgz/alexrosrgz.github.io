@@ -224,6 +224,16 @@ img {
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+/* While modal is open: freeze all poster sizes — no hover/press jump under the dim */
+body.modal-open .poster-card .poster-frame,
+body.modal-open .poster-card:hover .poster-frame,
+body.modal-open .poster-card:active .poster-frame,
+body.modal-open .poster-card.is-pressed .poster-frame,
+body.modal-open .poster-card:focus-visible .poster-frame {
+  transform: scale(1);
+  transition: none;
+}
+
 
 .poster-frame img {
   width: 100%;

@@ -29,6 +29,7 @@
 
   function openDetail(movie) {
     if (!modal || !movie) return;
+    document.querySelectorAll(".poster-card.is-pressed").forEach((el) => el.classList.remove("is-pressed"));
     modalTitle.textContent = movie.year
       ? `${movie.title} (${movie.year})`
       : movie.title;
