@@ -278,19 +278,33 @@
 
 
 
+
+    let pressAt = 0;
+    const MIN_PRESS_MS = 80;
     const setPressed = (on) => btn.classList.toggle("is-pressed", on);
     btn.addEventListener("pointerdown", (e) => {
       if (e.button != null && e.button !== 0) return;
+      pressAt = performance.now();
       setPressed(true);
     });
-    const release = () => setPressed(false);
-    btn.addEventListener("pointerup", release);
-    btn.addEventListener("pointercancel", release);
-    btn.addEventListener("pointerleave", release);
+    // Don't clear on pointerup — trackpad tap clears before click and kills the flash
+    const cancelPress = () => {
+      setPressed(false);
+      pressAt = 0;
+    };
+    btn.addEventListener("pointercancel", cancelPress);
+    btn.addEventListener("pointerleave", cancelPress);
     btn.addEventListener("click", () => {
-      release(); // modal starts — don't keep squash
-      openDetail(movie);
+      setPressed(true);
+      const elapsed = pressAt ? performance.now() - pressAt : 0;
+      const wait = Math.max(0, MIN_PRESS_MS - elapsed);
+      pressAt = 0;
+      setTimeout(() => {
+        setPressed(false);
+        openDetail(movie);
+      }, wait);
     });
+
 
 
 
