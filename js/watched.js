@@ -288,7 +288,7 @@
     btn.addEventListener("click", () => {
       setPressed(true);
       openDetail(movie);
-      requestAnimationFrame(() => setTimeout(release, 110));
+      requestAnimationFrame(() => setTimeout(release, 100));
     });
 
 

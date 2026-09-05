@@ -194,7 +194,8 @@ img {
   box-shadow: none;
   background: color-mix(in srgb, var(--muted) 18%, var(--bg));
   transform: scale(1);
-  transition: transform 70ms var(--ease), filter 70ms var(--ease);
+  /* Apple-ish: snappy in, slightly softer out */
+  transition: transform 100ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .poster-card:focus-visible {
@@ -206,11 +207,12 @@ img {
   outline-offset: 3px;
 }
 
-/* Clear button press — no hover lift */
+/* Quiet press only — no hover, no dim, no shadow */
 .poster-card.is-pressed .poster-frame,
 .poster-card:active .poster-frame {
-  transform: scale(0.92);
-  filter: brightness(0.92);
+  transform: scale(0.97);
+  transition-duration: 80ms;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 
