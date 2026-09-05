@@ -600,8 +600,60 @@ body.modal-open {
 
 /* ——— Reading ——— */
 .page--reading {
-  padding-top: 1.5rem;
+  padding-top: 0;
   padding-bottom: 3rem;
+}
+
+.reading-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 28px 48px;
+}
+
+.reading-hero__photo {
+  margin: 0;
+  min-width: 0;
+}
+
+.reading-hero__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  object-position: 70% 40%;
+  border-radius: 10px;
+}
+
+.reading-hero__statement {
+  margin: 0;
+  max-width: 14ch;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #141413;
+}
+
+@media (max-width: 899px) {
+  .reading-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 16px 36px;
+  }
+
+  .reading-hero__statement {
+    max-width: 16ch;
+  }
+}
+
+.page--reading .reading-grid {
+  margin-top: 8px; /* hero already has bottom padding; keep light air before grid */
 }
 
 .reading-grid {
