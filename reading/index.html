@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/site.css?v=feel10">
+  <link rel="stylesheet" href="/css/site.css?v=feel11">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -29,6 +29,17 @@
   <main class="page page--reading">
     <ul class="reading-grid" id="reading-grid" aria-label="Books"></ul>
   </main>
-  <script src="/js/reading.js?v=2" defer></script>
+
+  <div class="modal" id="book-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button type="button" class="modal-backdrop" id="modal-backdrop" tabindex="-1" aria-label="Close"></button>
+    <div class="modal-panel">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-year" id="modal-meta"></p>
+      <p class="modal-note" id="modal-note" hidden></p>
+    </div>
+  </div>
+
+  <script src="/js/reading.js?v=modal1" defer></script>
 </body>
 </html>
