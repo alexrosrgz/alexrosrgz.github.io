@@ -657,7 +657,6 @@ body.modal-open {
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: #141413;
-  -webkit-text-stroke: 0.2px currentColor; /* optical match to Favorites SVG weight */
 }
 
 .reading-hero__photo {
@@ -749,7 +748,6 @@ body.modal-open {
   letter-spacing: -0.02em;
   color: #141413;
   white-space: nowrap;
-  -webkit-text-stroke: 0.2px currentColor;
 }
 
 @media (hover: hover) and (pointer: fine) {
