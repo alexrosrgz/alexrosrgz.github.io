@@ -25,8 +25,8 @@ CSS source of truth: `css/site.css` `:root`.
 - **Tab title**: only `Alejandro Rosales Rodriguez` (no page-specific titles).
 - **Mobile nav**: wrap under `960px` (full name + links wrap; no horizontal scroll, no hamburger).
 - **Favorites statement**: continuous Source Serif SVG stretch (“I like watching movies…”).
-- **Reading statement**: same SVG treatment as Favorites; sized to column beside hero photo.
-- **Reading hero**: upright photo + statement; photo carries weight; no canvas-paint unless Alejandro asks.
+- **Reading statement**: Source Serif couplet (plain CSS, max-width ~14ch) — Favorites weight/voice, **not** Favorites SVG `textLength` banner.
+- **Reading hero**: statement left · smaller photo right (~40% width); upright photo; type block height ≈ photo on desktop; mobile stacks statement → photo → grid.
 - **Poster / cover grid**: no on-grid metadata chrome; details in modal.
 - **Poster hover** (fine pointer): `scale(1.015)` ~240ms ease-out — one cue only.
 - **Poster press**: `scale(0.97)` ~80ms in, ~200ms out; no brightness/dimming.
