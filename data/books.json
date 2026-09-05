@@ -97,8 +97,9 @@
     "finished": "2026-05-25",
     "note": "Amazon Music audiobook",
     "platform": "Amazon Music",
-    "cover": null,
-    "listOrder": 3
+    "cover": "/covers/books/suicidal-empathy-gad-saad.jpg",
+    "listOrder": 3,
+    "edition": "Hardcover"
   },
   {
     "title": "Meditations",
@@ -116,7 +117,8 @@
     "note": null,
     "platform": "Audible",
     "cover": "/covers/books/the-intelligent-investor-benjamin-graham.jpg",
-    "listOrder": 6
+    "listOrder": 6,
+    "edition": "75th Anniversary / Third Edition hardcover"
   },
   {
     "title": "A Brief History of Time",
@@ -207,7 +209,8 @@
     "note": "Spotify audiobook",
     "platform": "Spotify",
     "cover": "/covers/books/the-alchemist-paulo-coelho.jpg",
-    "listOrder": 15
+    "listOrder": 15,
+    "edition": "Hardcover"
   },
   {
     "title": "Sapiens",
@@ -234,7 +237,8 @@
     "note": null,
     "platform": null,
     "cover": "/covers/books/brief-answers-to-the-big-questions-stephen-hawking.jpg",
-    "listOrder": 23
+    "listOrder": 23,
+    "edition": "Hardcover"
   },
   {
     "title": "Homo Deus",
