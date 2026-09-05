@@ -782,6 +782,32 @@ body.modal-open {
   }
 }
 
+
+.reading-shelf-statement-wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 28px 40px;
+  overflow: visible;
+}
+
+.reading-shelf-statement-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.reading-shelf-statement-svg text {
+  fill: var(--ink);
+}
+
+@media (max-width: 899px) {
+  .reading-shelf-statement-wrap {
+    padding: 4px 16px 32px;
+  }
+}
+
 .page--reading .reading-grid {
   margin-top: 0;
   padding-top: 8px;
