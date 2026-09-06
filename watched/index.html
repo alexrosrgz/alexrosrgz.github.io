@@ -11,21 +11,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/site.css?v=navwrap1">
+  <link rel="stylesheet" href="/css/site.css?v=sidebar1">
 </head>
 <body>
-    <nav class="site-nav" aria-label="Primary">
-      <a class="nav-mark" href="/">Alejandro Rosales Rodriguez</a>
-      <ul class="nav-links">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="nav-mark" href="/">Alejandro Rosales Rodriguez</a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+  </nav>
+  <div class="nav-drawer" id="site-drawer" aria-hidden="true">
+    <button type="button" class="nav-drawer__backdrop" id="nav-backdrop" tabindex="-1" aria-label="Close menu"></button>
+    <aside class="nav-drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <button type="button" class="nav-drawer__close" id="nav-close" aria-label="Close menu">&times;</button>
+      <ul class="nav-drawer__links">
         <li><a href="/story/">Story</a></li>
-        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/technology/">Technology</a></li>
+        <li><a href="/teaching-spanish/">Teaching Spanish</a></li>
+        <li><a href="/music/">Music</a></li>
+        <li><a href="/travel/">Travel</a></li>
         <li><a href="/projects/">Projects</a></li>
         <li><a href="/watched/" class="is-active" aria-current="page">Watched</a></li>
         <li><a href="/favorite-movies/">Favorite Movies</a></li>
         <li><a href="/reading/">Reading</a></li>
-        <li><a href="/random/">Random</a></li>
       </ul>
-    </nav>
+    </aside>
+  </div>
   <main class="page page--watched">
     <div class="filter-row">
       <nav class="filter-row__cats watch-filter" aria-label="Categories">
@@ -66,5 +77,6 @@
 
   <script src="/js/watched.js?v=feel11" defer></script>
 
+  <script src="/js/nav.js?v=sidebar1" defer></script>
 </body>
 </html>

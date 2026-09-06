@@ -8,27 +8,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alejandro Rosales Rodriguez</title>
-  <meta http-equiv="refresh" content="0; url=/watched/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/site.css?v=navwrap1">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css?v=sidebar1">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
     <a class="nav-mark" href="/">Alejandro Rosales Rodriguez</a>
-    <ul class="nav-links">
-      <li><a href="/story/">Story</a></li>
-      <li><a href="/photos/">Photos</a></li>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/watched/">Watched</a></li>
-        <li><a href="/favorite-movies/">Favorite Movies</a></li>
-      <li><a href="/reading/">Reading</a></li>
-      <li><a href="/random/">Random</a></li>
-    </ul>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-drawer" aria-label="Open menu">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
   </nav>
+  <div class="nav-drawer" id="site-drawer" aria-hidden="true">
+    <button type="button" class="nav-drawer__backdrop" id="nav-backdrop" tabindex="-1" aria-label="Close menu"></button>
+    <aside class="nav-drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <button type="button" class="nav-drawer__close" id="nav-close" aria-label="Close menu">&times;</button>
+      <ul class="nav-drawer__links">
+        <li><a href="/story/">Story</a></li>
+        <li><a href="/technology/">Technology</a></li>
+        <li><a href="/teaching-spanish/">Teaching Spanish</a></li>
+        <li><a href="/music/">Music</a></li>
+        <li><a href="/travel/">Travel</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/watched/">Watched</a></li>
+        <li><a href="/favorite-movies/">Favorite Movies</a></li>
+        <li><a href="/reading/">Reading</a></li>
+      </ul>
+    </aside>
+  </div>
   <main class="page page--home">
-    <p class="quiet-line"><a href="/watched/">Watched</a></p>
+    <div class="home-hero">
+      <p class="home-manifesto">I want to understand humanity<br>and the nature of the universe.</p>
+      <p class="home-tagline">Curiosity is my superpower.</p>
+      <ul class="home-social" aria-label="Social">
+        <li>
+          <a class="home-social__link" href="https://www.instagram.com/alexrosrgz/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.75 6.5a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="home-social__link" href="https://www.youtube.com/@alexrosrgz" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="home-social__link" href="https://x.com/alexrosrgz" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.56l-5.14-6.72L5.2 22H1.94l8.03-9.17L1.5 2h6.72l4.64 6.14L18.244 2zm-1.15 18h1.8L7.02 3.94H5.1L17.094 20z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="home-social__link" href="https://www.linkedin.com/in/alexrosrgz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V23h-4v-6.6c0-1.57-.03-3.59-2.19-3.59-2.19 0-2.53 1.71-2.53 3.48V23h-4V8.5z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </main>
+  <script src="/js/nav.js?v=sidebar1" defer></script>
 </body>
 </html>

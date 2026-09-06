@@ -52,7 +52,7 @@ img {
   display: block;
 }
 
-/* ——— Thin nav ——— */
+/* ——— Thin nav + right drawer ——— */
 .site-nav {
   position: sticky;
   top: 0;
@@ -79,57 +79,132 @@ img {
   flex-shrink: 0;
 }
 
-.nav-links {
-  display: flex;
+.nav-toggle {
+  display: inline-flex;
   align-items: center;
-  gap: clamp(0.85rem, 2.5vw, 1.5rem);
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle__bars {
+  position: relative;
+  display: block;
+  width: 1.25rem;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.nav-toggle__bars::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -6px;
+  width: 1.25rem;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.nav-drawer.is-open {
+  pointer-events: auto;
+}
+
+.nav-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: color-mix(in srgb, var(--ink) 28%, transparent);
+  opacity: 0;
+  transition: opacity 220ms var(--ease);
+  cursor: pointer;
+}
+
+.nav-drawer.is-open .nav-drawer__backdrop {
+  opacity: 1;
+}
+
+.nav-drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(20rem, 86vw);
+  background: var(--bg);
+  box-shadow: -12px 0 40px color-mix(in srgb, var(--ink) 8%, transparent);
+  padding: 1.25rem 1.5rem 2rem;
+  transform: translateX(100%);
+  transition: transform 280ms var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-drawer.is-open .nav-drawer__panel {
+  transform: translateX(0);
+}
+
+.nav-drawer__close {
+  align-self: flex-end;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nav-drawer__close:hover {
+  color: var(--ink);
+}
+
+.nav-drawer__links {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.nav-links a {
+.nav-drawer__links a {
+  display: block;
+  padding: 0.55rem 0.15rem;
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--muted);
   transition: color 0.2s var(--ease);
 }
 
-.nav-links a:hover {
+.nav-drawer__links a:hover,
+.nav-drawer__links a.is-active {
   color: var(--ink);
 }
 
-.nav-links a.is-active {
-  color: var(--ink);
-}
-
-/* Mobile: wrap instead of horizontal overflow */
-@media (max-width: 960px) {
-  .site-nav {
-    flex-wrap: wrap;
-    height: auto;
-    min-height: var(--nav-h);
-    align-items: center;
-    padding-top: 0.85rem;
-    padding-bottom: 0.85rem;
-    gap: 0.65rem 1rem;
-  }
-
-  .nav-mark {
-    white-space: normal;
-    font-size: 1rem;
-    line-height: 1.2;
-    max-width: 100%;
-  }
-
-  .nav-links {
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-    row-gap: 0.45rem;
-    column-gap: 0.9rem;
-  }
+body.nav-open {
+  overflow: hidden;
 }
 
 /* ——— Page shells ——— */
@@ -937,4 +1012,53 @@ body.modal-open {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1.25rem;
   }
+}
+
+
+/* ——— Home ——— */
+.home-hero {
+  max-width: 40rem;
+}
+
+.home-manifesto {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.home-tagline {
+  margin: 0 0 2rem;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+.home-social {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--muted);
+  transition: color 0.2s var(--ease);
+}
+
+.home-social__link:hover {
+  color: var(--ink);
 }
