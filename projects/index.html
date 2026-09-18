@@ -10,8 +10,8 @@
   <title>Alejandro Rosales Rodriguez</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/site.css?v=sidebar1">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css?v=projects1">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -37,10 +37,46 @@
       </ul>
     </aside>
   </div>
-  <main class="page page--stub">
-    <p class="quiet-empty">—</p>
+  <main class="page page--projects">
+    <p class="projects-intro">Things I’ve built.</p>
+    <ul class="projects-grid">
+      <li class="project-card">
+        <a class="project-card__media" href="https://galactic-voyager.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <img src="/projects/assets/galactic-voyager.jpg" alt="Galactic Voyager gameplay" width="960" height="600" loading="eager">
+        </a>
+        <h2 class="project-card__title">Galactic Voyager</h2>
+        <p class="project-card__blurb">3D space combat and exploration across a realistic solar system — pilot, boost, and fight through the planets.</p>
+        <p class="project-card__meta">Three.js · Vite · JavaScript</p>
+        <ul class="project-card__links">
+          <li><a href="https://galactic-voyager.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a></li>
+          <li><a href="https://github.com/alexrosrgz/GalacticVoyager" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </li>
+      <li class="project-card">
+        <a class="project-card__media" href="https://interstellar-beta-pink.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <img src="/projects/assets/interstellar.jpg" alt="Interstellar Earth flight simulator" width="960" height="600" loading="eager">
+        </a>
+        <h2 class="project-card__title">Interstellar</h2>
+        <p class="project-card__blurb">Interactive 3D flight around Earth with live instruments, country detection, and data overlays as you fly.</p>
+        <p class="project-card__meta">React · TypeScript · CesiumJS</p>
+        <ul class="project-card__links">
+          <li><a href="https://interstellar-beta-pink.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a></li>
+          <li><a href="https://github.com/alexrosrgz/Interstellar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </li>
+      <li class="project-card">
+        <div class="project-card__media" aria-hidden="true">
+          <img src="/projects/assets/rubiks-cube.jpg" alt="" width="960" height="600" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'project-card__placeholder',textContent:'3×3'}))">
+        </div>
+        <h2 class="project-card__title">Rubik’s Cube</h2>
+        <p class="project-card__blurb">Interactive 3D Rubik’s Cube with scramble, moves, and grip-aware controls — a playable cube in the browser.</p>
+        <p class="project-card__meta">React · TypeScript · WebGL</p>
+        <ul class="project-card__links">
+          <li><a href="https://github.com/alexrosrgz/rubikscube" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </li>
+    </ul>
   </main>
-
   <script src="/js/nav.js?v=sidebar1" defer></script>
 </body>
 </html>
