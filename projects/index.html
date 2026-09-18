@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/site.css?v=projects1">
+  <link rel="stylesheet" href="/css/site.css?v=projects2">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -65,13 +65,14 @@
         </ul>
       </li>
       <li class="project-card">
-        <div class="project-card__media" aria-hidden="true">
-          <img src="/projects/assets/rubiks-cube.jpg" alt="" width="960" height="600" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'project-card__placeholder',textContent:'3×3'}))">
-        </div>
+        <a class="project-card__media" href="https://rubikscube.grok.me/" target="_blank" rel="noopener noreferrer">
+          <img src="/projects/assets/rubiks-cube.jpg" alt="Interactive Rubik’s Cube" width="960" height="600" loading="lazy">
+        </a>
         <h2 class="project-card__title">Rubik’s Cube</h2>
         <p class="project-card__blurb">Interactive 3D Rubik’s Cube with scramble, moves, and grip-aware controls — a playable cube in the browser.</p>
         <p class="project-card__meta">React · TypeScript · WebGL</p>
         <ul class="project-card__links">
+          <li><a href="https://rubikscube.grok.me/" target="_blank" rel="noopener noreferrer">Live demo</a></li>
           <li><a href="https://github.com/alexrosrgz/rubikscube" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </li>
