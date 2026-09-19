@@ -1150,7 +1150,7 @@ body.modal-open {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center center;
   border-radius: 10px;
 }
 
