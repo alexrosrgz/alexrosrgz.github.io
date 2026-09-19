@@ -1085,7 +1085,7 @@ body.modal-open {
 
 .teaching-hero {
   display: grid;
-  grid-template-columns: minmax(18rem, 1.45fr) minmax(0, 0.8fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.8fr);
   gap: 40px;
   align-items: stretch;
   width: 100%;
@@ -1243,26 +1243,73 @@ body.modal-open {
   margin-bottom: 0;
 }
 
-@media (max-width: 899px) {
-  /* teaching uses shared .page pad-x */
-
-  .teaching-hero {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding-top: 28px;
-  }
-
-  .teaching-hero__aside {
-    max-width: 22rem;
-  }
-
+/* Allow headline wrap before the single-column break so nowrap doesn’t overflow */
+@media (max-width: 1099px) {
   .teaching-hero__line {
     white-space: normal !important;
   }
+}
+
+@media (max-width: 899px) {
+  .teaching-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+    align-items: stretch;
+  }
+
+  /* Flatten so we can order: statement → photo/CTA → copy → quotes */
+  .teaching-hero__main {
+    display: contents;
+  }
+
+  .teaching-hero__statement {
+    order: 1;
+    margin: 0 0 0;
+    font-size: clamp(1.65rem, 7vw, 2.15rem);
+  }
+
+  .teaching-hero__aside {
+    order: 2;
+    max-width: none;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .teaching-about {
+    order: 3;
+    max-width: none;
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1.02rem;
+  }
+
+  .teaching-meta {
+    order: 4;
+    font-size: 0.95rem;
+  }
 
   .teaching-quotes-wrap {
-    margin-top: 0;
+    order: 5;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
     max-width: none;
+  }
+
+  .teaching-section-label {
+    margin: 0 0 0.75rem;
+  }
+
+  .teaching-quotes {
+    gap: 1rem;
+  }
+
+  .teaching-quote p {
+    font-size: 1.02rem;
+  }
+
+  .teaching-hero__photo img {
+    border-radius: 8px;
   }
 }
 
