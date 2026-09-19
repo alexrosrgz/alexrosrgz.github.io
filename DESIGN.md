@@ -27,6 +27,7 @@ CSS source of truth: `css/site.css` `:root`.
 - **Favorites statement**: continuous Source Serif SVG stretch (“I like watching movies…”).
 - **Reading statement**: Source Serif couplet (plain CSS, max-width ~14ch) — Favorites weight/voice, **not** Favorites SVG `textLength` banner.
 - **Reading shelf statement**: full-width Favorites-style SVG stretch below Top 3 — “Most of what I read is to understand how things work.”
+- **Teaching Spanish**: left type stack · right Hult portrait · ink Book a lesson under photo · quiet quote list.
 - **Reading Top 3**: between hero and full grid; three covers left (Brief History of Time → Zero to One → Sapiens, cover-only) + `Top 3.` Source Serif right; same poster hover/press + book modal; mobile stacks type then covers.
 - **Reading hero**: statement left · smaller photo right (~40% width); upright photo; type block height ≈ photo on desktop; mobile stacks statement → photo → grid.
 - **Poster / cover grid**: no on-grid metadata chrome; details in modal.

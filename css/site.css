@@ -1063,269 +1063,194 @@ body.modal-open {
   color: var(--ink);
 }
 
-
-
 /* ——— Teaching Spanish ——— */
 .page--teaching-spanish {
-  padding-top: 2.5rem;
-  padding-bottom: 4.5rem;
+  padding: 0 0 72px;
 }
 
-.teaching-block {
-  max-width: min(42rem, 100%);
+.page--teaching-spanish > .teaching-hero,
+.page--teaching-spanish > .teaching-quotes-wrap {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+  box-sizing: border-box;
 }
 
-.teaching-statement {
-  margin: 0 0 1.75rem;
-  font-family: var(--font-serif);
+.teaching-hero {
+  display: grid;
+  grid-template-columns: minmax(18rem, 1.45fr) minmax(0, 0.8fr);
+  gap: 40px;
+  align-items: start;
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 0;
+}
+
+.teaching-hero__main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.teaching-hero__statement {
+  margin: 0 0 20px;
+  max-width: none;
+  font-family: "Source Serif 4", Georgia, serif;
   font-weight: 700;
-  font-size: clamp(1.75rem, 4.2vw, 2.5rem);
-  line-height: 1.25;
+  font-size: clamp(1.7rem, 2.4vw, 2.15rem);
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: #141413;
+  text-align: left;
 }
 
-.teaching-statement .line,
-.home-manifesto .line {
+.teaching-hero__line {
   display: block;
-  white-space: nowrap;
-}
-
-@media (max-width: 520px) {
-  .teaching-statement .line,
-  .home-manifesto .line {
-    white-space: normal;
-  }
+  white-space: nowrap !important;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .teaching-about {
-  margin: 0 0 1.25rem;
-  max-width: 38ch;
+  margin: 0 0 12px;
+  max-width: 36ch;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 1.55;
-  color: var(--ink);
+  color: #141413;
 }
 
 .teaching-meta {
-  margin: 0 0 2.5rem;
+  margin: 0 0 0;
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-weight: 400;
+  font-size: 13px;
   line-height: 1.45;
-  color: var(--muted);
-  letter-spacing: 0.01em;
+  color: #87867F;
+}
+
+.teaching-hero__aside {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.teaching-hero__photo {
+  margin: 0;
+}
+
+.teaching-hero__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 10px;
+}
+
+.teaching-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #141413;
+  color: #FAF9F5;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity 0.2s var(--ease);
+}
+
+.teaching-cta:hover {
+  color: #FAF9F5;
+  opacity: 0.88;
+}
+
+.teaching-quotes-wrap {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  max-width: 36ch;
 }
 
 .teaching-section-label {
-  margin: 0 0 1rem;
+  margin: 16px 0 12px;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #87867F;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .teaching-quotes {
   list-style: none;
-  margin: 0 0 2.5rem;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.35rem;
+  gap: 18px;
+  max-width: none;
 }
 
 .teaching-quote {
   margin: 0;
-  padding: 0;
-  border: 0;
 }
 
 .teaching-quote p {
-  margin: 0 0 0.4rem;
-  font-family: var(--font-serif);
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
   font-weight: 400;
-  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
-  line-height: 1.45;
-  letter-spacing: -0.01em;
-  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  color: #141413;
 }
 
 .teaching-quote footer {
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  color: var(--muted);
-}
-
-.teaching-preply {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.85rem 1.15rem;
-  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--bg) 80%, #fff);
-  color: var(--ink);
-  text-decoration: none;
-  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
-  max-width: 100%;
-}
-
-.teaching-preply:hover {
-  border-color: color-mix(in srgb, var(--ink) 35%, transparent);
-  color: var(--ink);
-}
-
-.teaching-preply__mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 6px;
-  background: color-mix(in srgb, var(--clay) 18%, var(--bg));
-  color: var(--clay);
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
-  flex-shrink: 0;
-}
-
-.teaching-preply__text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  min-width: 0;
-}
-
-.teaching-preply__title {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  line-height: 1.3;
-}
-
-.teaching-preply__sub {
-  font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 0.8125rem;
-  color: var(--muted);
-  line-height: 1.3;
+  font-size: 13px;
+  color: #87867F;
 }
 
-
-/* ——— Projects ——— */
-.page--projects {
-  padding-top: 2.5rem;
-  padding-bottom: 4.5rem;
-}
-
-.projects-intro {
-  margin: 0 0 2.25rem;
-  max-width: 28ch;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-
-.projects-grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 800px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+@media (max-width: 899px) {
+  .page--teaching-spanish > .teaching-hero,
+  .page--teaching-spanish > .teaching-quotes-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
   }
-}
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: 100%;
-}
+  .teaching-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 28px;
+  }
 
-.project-card__media {
-  display: block;
-  aspect-ratio: 16 / 10;
-  border-radius: 10px;
-  overflow: hidden;
-  background: color-mix(in srgb, var(--muted) 16%, var(--bg));
-  margin: 0 0 0.9rem;
-}
+  .teaching-hero__aside {
+    max-width: 22rem;
+  }
 
-.project-card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .teaching-hero__line {
+    white-space: normal !important;
+  }
 
-.project-card__placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--muted);
-}
-
-.project-card__title {
-  margin: 0 0 0.35rem;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-
-.project-card__blurb {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--ink);
-  flex: 1;
-}
-
-.project-card__meta {
-  margin: 0 0 0.85rem;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
-.project-card__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.project-card__links a {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--muted);
-  border-bottom: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
-  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
-}
-
-.project-card__links a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
+  .teaching-quotes-wrap {
+    margin-top: 0;
+    max-width: none;
+  }
 }
