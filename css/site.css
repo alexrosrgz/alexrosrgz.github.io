@@ -1169,20 +1169,39 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.35em;
   width: 100%;
   box-sizing: border-box;
-  height: 44px;
-  padding: 0 20px;
+  min-height: 44px;
+  height: auto;
+  padding: 0.7rem 1rem;
   border: 0;
   border-radius: 8px;
   background: #141413;
   color: #FAF9F5;
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
   transition: opacity 0.2s var(--ease);
+}
+
+.teaching-cta__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.teaching-cta__mark {
+  display: block;
+  width: 0.95em;
+  height: 0.95em;
+  flex: 0 0 auto;
+  color: #FAF9F5;
 }
 
 .teaching-cta:hover {
@@ -1310,6 +1329,12 @@ body.modal-open {
 
   .teaching-hero__photo img {
     border-radius: 8px;
+  }
+
+  .teaching-cta {
+    white-space: normal;
+    font-size: 0.88rem;
+    padding: 0.75rem 0.9rem;
   }
 }
 
